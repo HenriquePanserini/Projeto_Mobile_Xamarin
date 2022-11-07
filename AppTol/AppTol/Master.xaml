@@ -23,7 +23,7 @@
                 FontAttributes="Bold"
                 TextDecorations="None" 
             />
-            <Button AutomationId="btn_usuario"
+            <Button x:Name="btn_usuario"
                     Text="Usuário"
                     VerticalOptions="Fill"
                     HorizontalOptions="FillAndExpand"
@@ -33,7 +33,7 @@
                     HeightRequest="35"
                     FontSize="12"
                     FontAttributes="Bold"/>
-            <Button AutomationId="btn_sinc"
+            <Button x:Name="btn_sinc"
                     Text="sincronizar"
                     VerticalOptions="Fill"
                     HorizontalOptions="FillAndExpand"
@@ -43,7 +43,7 @@
                     HeightRequest="35"
                     FontSize="12"
                     FontAttributes="Bold"/>
-            <Button AutomationId="btn_cad"
+            <Button x:Name="btn_cad"
                     Text="Cadastro"
                     VerticalOptions="Fill"
                     HorizontalOptions="FillAndExpand"
@@ -54,7 +54,7 @@
                     FontSize="12"
                     FontAttributes="Bold"
                     />
-            <Button AutomationId="btn_limpar"
+            <Button x:Name="btn_limpar"
                     Text="Limpar"
                     VerticalOptions="Fill"
                     HorizontalOptions="FillAndExpand"
@@ -74,7 +74,7 @@
                    TranslationX="80"
                    TranslationY="332"
                 />
-            <Button AutomationId="btn_sair"
+            <Button x:Name="btn_sair"
                     Text="   "
                     VerticalOptions="Fill"
                     HorizontalOptions="FillAndExpand"
