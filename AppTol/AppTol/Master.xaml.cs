@@ -24,7 +24,8 @@ namespace AppTol
         Master master = new Master();
         public Master()
         {
-            InitializeComponent();  
+            InitializeComponent();
+            Create();
         }
 
         protected void Create()
@@ -47,7 +48,7 @@ namespace AppTol
         {
             bool resposta = await DisplayAlert("Aviso!", "Deseja mesmo encerrar o aplicativo", "Yes", "No");
 
-            if (resposta = false)
+            if (resposta)
             {
 
                 System.Environment.Exit(0);
