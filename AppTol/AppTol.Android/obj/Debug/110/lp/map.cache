@@ -88,3 +88,7 @@ androidx.asynclayoutinflater.asynclayoutinflater.aar
 androidx.legacy.legacy-support-core-ui.aar
 androidx.legacy.legacy-support-v4.aar
 androidx.browser.browser.aar
+System.Data.Portable.dll
+System.Transactions.Portable.dll
+SQLitePCLRaw.lib.e_sqlite3.android.dll
+PCLExt.FileStorage.dll

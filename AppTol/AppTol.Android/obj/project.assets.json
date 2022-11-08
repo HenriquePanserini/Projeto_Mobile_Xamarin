@@ -14,6 +14,27 @@
           "lib/netstandard2.0/DocumentFormat.OpenXml.dll": {}
         }
       },
+      "FluentValidation/11.2.2": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.1/FluentValidation.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.1/FluentValidation.dll": {}
+        }
+      },
+      "Microsoft.Data.Sqlite.Core/7.0.0": {
+        "type": "package",
+        "dependencies": {
+          "SQLitePCLRaw.core": "2.1.2"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Data.Sqlite.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Data.Sqlite.dll": {}
+        }
+      },
       "Newtonsoft.Json/13.0.1": {
         "type": "package",
         "compile": {
@@ -21,6 +42,17 @@
         },
         "runtime": {
           "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+        }
+      },
+      "PCLExt.FileStorage/1.4.1.1": {
+        "type": "package",
+        "compile": {
+          "lib/MonoAndroid/PCLExt.FileStorage.Abstractions.dll": {},
+          "lib/MonoAndroid/PCLExt.FileStorage.dll": {}
+        },
+        "runtime": {
+          "lib/MonoAndroid/PCLExt.FileStorage.Abstractions.dll": {},
+          "lib/MonoAndroid/PCLExt.FileStorage.dll": {}
         }
       },
       "Prism.Core/8.1.97": {
@@ -61,6 +93,68 @@
           "lib/netstandard2.0/SendGrid.dll": {}
         }
       },
+      "sqlite-net-pcl/1.8.116": {
+        "type": "package",
+        "dependencies": {
+          "SQLitePCLRaw.bundle_green": "2.0.4"
+        },
+        "compile": {
+          "lib/netstandard2.0/SQLite-net.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/SQLite-net.dll": {}
+        }
+      },
+      "SQLitePCLRaw.bundle_green/2.0.4": {
+        "type": "package",
+        "dependencies": {
+          "SQLitePCLRaw.core": "2.0.4",
+          "SQLitePCLRaw.lib.e_sqlite3.android": "2.0.4",
+          "SQLitePCLRaw.provider.e_sqlite3": "2.0.4"
+        },
+        "compile": {
+          "lib/netstandard2.0/SQLitePCLRaw.batteries_v2.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/SQLitePCLRaw.batteries_v2.dll": {}
+        }
+      },
+      "SQLitePCLRaw.core/2.1.2": {
+        "type": "package",
+        "dependencies": {
+          "System.Memory": "4.5.3"
+        },
+        "compile": {
+          "lib/netstandard2.0/SQLitePCLRaw.core.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/SQLitePCLRaw.core.dll": {}
+        }
+      },
+      "SQLitePCLRaw.lib.e_sqlite3.android/2.0.4": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "Java.Interop"
+        ],
+        "compile": {
+          "lib/monoandroid80/SQLitePCLRaw.lib.e_sqlite3.android.dll": {}
+        },
+        "runtime": {
+          "lib/monoandroid80/SQLitePCLRaw.lib.e_sqlite3.android.dll": {}
+        }
+      },
+      "SQLitePCLRaw.provider.e_sqlite3/2.0.4": {
+        "type": "package",
+        "dependencies": {
+          "SQLitePCLRaw.core": "2.0.4"
+        },
+        "compile": {
+          "lib/netstandard2.0/SQLitePCLRaw.provider.e_sqlite3.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/SQLitePCLRaw.provider.e_sqlite3.dll": {}
+        }
+      },
       "starkbank-ecdsa/1.3.3": {
         "type": "package",
         "compile": {
@@ -68,6 +162,15 @@
         },
         "runtime": {
           "lib/netstandard2.1/StarkbankEcdsa.dll": {}
+        }
+      },
+      "System.Buffers/4.4.0": {
+        "type": "package",
+        "compile": {
+          "ref/netstandard2.0/System.Buffers.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Buffers.dll": {}
         }
       },
       "System.IO.Packaging/4.7.0": {
@@ -79,6 +182,19 @@
           "lib/netstandard2.0/System.IO.Packaging.dll": {}
         }
       },
+      "System.Memory/4.5.3": {
+        "type": "package",
+        "dependencies": {
+          "System.Buffers": "4.4.0",
+          "System.Runtime.CompilerServices.Unsafe": "4.5.2"
+        },
+        "compile": {
+          "lib/netstandard2.0/System.Memory.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Memory.dll": {}
+        }
+      },
       "System.Numerics.Vectors/4.5.0": {
         "type": "package",
         "compile": {
@@ -86,6 +202,15 @@
         },
         "runtime": {
           "lib/MonoAndroid10/_._": {}
+        }
+      },
+      "System.Runtime.CompilerServices.Unsafe/4.5.2": {
+        "type": "package",
+        "compile": {
+          "ref/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll": {}
         }
       },
       "Xam.Plugin.Media/5.0.1": {
@@ -1069,11 +1194,15 @@
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
           "DocumentFormat.OpenXml": "2.18.0",
+          "FluentValidation": "11.2.2",
+          "Microsoft.Data.Sqlite.Core": "7.0.0",
+          "PCLExt.FileStorage": "1.4.1.1",
           "Prism.Forms": "8.1.97",
           "SendGrid": "9.28.1",
           "Xam.Plugin.Media": "5.0.1",
           "Xamarin.Essentials": "1.7.3",
-          "Xamarin.Forms": "5.0.0.2515"
+          "Xamarin.Forms": "5.0.0.2515",
+          "sqlite-net-pcl": "1.8.116"
         },
         "compile": {
           "bin/placeholder/AppTol.dll": {}
@@ -1107,6 +1236,43 @@
         "lib/netstandard2.0/DocumentFormat.OpenXml.xml"
       ]
     },
+    "FluentValidation/11.2.2": {
+      "sha512": "5QEte2BUZZF6Sezeekr7Zu1THfgpxU7pmuL2SjIrajuGMah+pxPGiRiLtw+x/tSUSSVmcv9LrUe41lKu4l0n4A==",
+      "type": "package",
+      "path": "fluentvalidation/11.2.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "fluent-validation-icon.png",
+        "fluentvalidation.11.2.2.nupkg.sha512",
+        "fluentvalidation.nuspec",
+        "lib/net5.0/FluentValidation.dll",
+        "lib/net5.0/FluentValidation.xml",
+        "lib/net6.0/FluentValidation.dll",
+        "lib/net6.0/FluentValidation.xml",
+        "lib/netstandard2.0/FluentValidation.dll",
+        "lib/netstandard2.0/FluentValidation.xml",
+        "lib/netstandard2.1/FluentValidation.dll",
+        "lib/netstandard2.1/FluentValidation.xml"
+      ]
+    },
+    "Microsoft.Data.Sqlite.Core/7.0.0": {
+      "sha512": "WC7SANtaFTmQ/WPyhrE96h88MrH28C7kTBenDf5Eo+IR6CbWM0Uw2pR2++tyYr3qe/zSIsIYroEupB1mLg/adw==",
+      "type": "package",
+      "path": "microsoft.data.sqlite.core/7.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "lib/net6.0/Microsoft.Data.Sqlite.dll",
+        "lib/net6.0/Microsoft.Data.Sqlite.xml",
+        "lib/netstandard2.0/Microsoft.Data.Sqlite.dll",
+        "lib/netstandard2.0/Microsoft.Data.Sqlite.xml",
+        "microsoft.data.sqlite.core.7.0.0.nupkg.sha512",
+        "microsoft.data.sqlite.core.nuspec"
+      ]
+    },
     "Newtonsoft.Json/13.0.1": {
       "sha512": "ppPFpBcvxdsfUonNcvITKqLl3bqxWbDCZIzDWHzjpdAHRFfZe0Dw9HmA0+za13IdyrgJwpkDTDA9fHaxOrt20A==",
       "type": "package",
@@ -1132,6 +1298,53 @@
         "newtonsoft.json.13.0.1.nupkg.sha512",
         "newtonsoft.json.nuspec",
         "packageIcon.png"
+      ]
+    },
+    "PCLExt.FileStorage/1.4.1.1": {
+      "sha512": "1obyFostdhYsRVTld0Lo/h5c9ZgXPWfe/BRkd2TKn6M33bE+LLJVdLfPcfUxrjUvYElwor4hh8zJ2DkH/l0KYA==",
+      "type": "package",
+      "path": "pclext.filestorage/1.4.1.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/MonoAndroid/PCLExt.FileStorage.Abstractions.dll",
+        "lib/MonoAndroid/PCLExt.FileStorage.Abstractions.xml",
+        "lib/MonoAndroid/PCLExt.FileStorage.dll",
+        "lib/MonoAndroid/PCLExt.FileStorage.xml",
+        "lib/Xamarin.Mac20/PCLExt.FileStorage.Abstractions.dll",
+        "lib/Xamarin.Mac20/PCLExt.FileStorage.Abstractions.xml",
+        "lib/Xamarin.Mac20/PCLExt.FileStorage.dll",
+        "lib/Xamarin.Mac20/PCLExt.FileStorage.xml",
+        "lib/Xamarin.iOS/PCLExt.FileStorage.Abstractions.dll",
+        "lib/Xamarin.iOS/PCLExt.FileStorage.Abstractions.xml",
+        "lib/Xamarin.iOS/PCLExt.FileStorage.dll",
+        "lib/Xamarin.iOS/PCLExt.FileStorage.xml",
+        "lib/net45/PCLExt.FileStorage.Abstractions.dll",
+        "lib/net45/PCLExt.FileStorage.Abstractions.xml",
+        "lib/net45/PCLExt.FileStorage.dll",
+        "lib/net45/PCLExt.FileStorage.xml",
+        "lib/netcoreapp2.0/PCLExt.FileStorage.Abstractions.dll",
+        "lib/netcoreapp2.0/PCLExt.FileStorage.Abstractions.xml",
+        "lib/netcoreapp2.0/PCLExt.FileStorage.dll",
+        "lib/netcoreapp2.0/PCLExt.FileStorage.xml",
+        "lib/netstandard2.0/PCLExt.FileStorage.Abstractions.dll",
+        "lib/netstandard2.0/PCLExt.FileStorage.Abstractions.xml",
+        "lib/netstandard2.0/PCLExt.FileStorage.dll",
+        "lib/netstandard2.0/PCLExt.FileStorage.xml",
+        "lib/portable-net45+win8+wpa81+wp8/PCLExt.FileStorage.Abstractions.dll",
+        "lib/portable-net45+win8+wpa81+wp8/PCLExt.FileStorage.Abstractions.xml",
+        "lib/portable-net45+win8+wpa81+wp8/PCLExt.FileStorage.dll",
+        "lib/portable-net45+win8+wpa81+wp8/PCLExt.FileStorage.xml",
+        "lib/portable-net45+win8+wpa81/PCLExt.FileStorage.Abstractions.dll",
+        "lib/portable-net45+win8+wpa81/PCLExt.FileStorage.Abstractions.xml",
+        "lib/portable-net45+win8+wpa81/PCLExt.FileStorage.dll",
+        "lib/portable-net45+win8+wpa81/PCLExt.FileStorage.xml",
+        "lib/uap10.0/PCLExt.FileStorage.Abstractions.dll",
+        "lib/uap10.0/PCLExt.FileStorage.Abstractions.xml",
+        "lib/uap10.0/PCLExt.FileStorage.dll",
+        "lib/uap10.0/PCLExt.FileStorage.xml",
+        "pclext.filestorage.1.4.1.1.nupkg.sha512",
+        "pclext.filestorage.nuspec"
       ]
     },
     "Prism.Core/8.1.97": {
@@ -1203,6 +1416,76 @@
         "sendgrid.nuspec"
       ]
     },
+    "sqlite-net-pcl/1.8.116": {
+      "sha512": "W0NuwAOVVAR9LP4eZwNBIrim1p3EN7t8iNfSHXEhtzKAd4YyItekoQ8NyWYs4faVSrN2KZr/P5u4hycCjKKexg==",
+      "type": "package",
+      "path": "sqlite-net-pcl/1.8.116",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "Logo-low.png",
+        "lib/netstandard2.0/SQLite-net.dll",
+        "lib/netstandard2.0/SQLite-net.xml",
+        "sqlite-net-pcl.1.8.116.nupkg.sha512",
+        "sqlite-net-pcl.nuspec"
+      ]
+    },
+    "SQLitePCLRaw.bundle_green/2.0.4": {
+      "sha512": "ubFgOHDmtTcq2LU7Ss10yHnFVMm2rFVr65Ggi+Mh514KjGx4pal98P2zSvZtWf3wbtJw6G1InBgeozBtnpEfKQ==",
+      "type": "package",
+      "path": "sqlitepclraw.bundle_green/2.0.4",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/Xamarin.iOS10/SQLitePCLRaw.batteries_v2.dll",
+        "lib/Xamarin.iOS10/SQLitePCLRaw.nativelibrary.dll",
+        "lib/net461/SQLitePCLRaw.batteries_v2.dll",
+        "lib/net461/SQLitePCLRaw.nativelibrary.dll",
+        "lib/netcoreapp3.1/SQLitePCLRaw.batteries_v2.dll",
+        "lib/netcoreapp3.1/SQLitePCLRaw.nativelibrary.dll",
+        "lib/netstandard2.0/SQLitePCLRaw.batteries_v2.dll",
+        "sqlitepclraw.bundle_green.2.0.4.nupkg.sha512",
+        "sqlitepclraw.bundle_green.nuspec"
+      ]
+    },
+    "SQLitePCLRaw.core/2.1.2": {
+      "sha512": "A8EBepVqY2lnAp3a8jnhbgzF2tlj2S3HcJQGANTYg/TbYbKa8Z5cM1h74An/vy0svhfzT7tVY0sFmUglLgv+2g==",
+      "type": "package",
+      "path": "sqlitepclraw.core/2.1.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/SQLitePCLRaw.core.dll",
+        "sqlitepclraw.core.2.1.2.nupkg.sha512",
+        "sqlitepclraw.core.nuspec"
+      ]
+    },
+    "SQLitePCLRaw.lib.e_sqlite3.android/2.0.4": {
+      "sha512": "M7evP2q/gosKlDvxtQ+T4h+MWNiBzfIis1eZr6jrQnh3H9md+74e2cni/b0vm2OymyV/zZp7cKfUgde57zvqwA==",
+      "type": "package",
+      "path": "sqlitepclraw.lib.e_sqlite3.android/2.0.4",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/monoandroid80/SQLitePCLRaw.lib.e_sqlite3.android.dll",
+        "sqlitepclraw.lib.e_sqlite3.android.2.0.4.nupkg.sha512",
+        "sqlitepclraw.lib.e_sqlite3.android.nuspec"
+      ]
+    },
+    "SQLitePCLRaw.provider.e_sqlite3/2.0.4": {
+      "sha512": "YiqCw+PfiPIuX2aZnEqt1ya5ldGm4ParIqzaRXtztDu8mdzZxOXVYOrKZazXg6nbwYbCP1H5mOYGmBFQ2W0M5g==",
+      "type": "package",
+      "path": "sqlitepclraw.provider.e_sqlite3/2.0.4",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/SQLitePCLRaw.provider.e_sqlite3.dll",
+        "lib/uap10.0/SQLitePCLRaw.provider.e_sqlite3.dll",
+        "sqlitepclraw.provider.e_sqlite3.2.0.4.nupkg.sha512",
+        "sqlitepclraw.provider.e_sqlite3.nuspec"
+      ]
+    },
     "starkbank-ecdsa/1.3.3": {
       "sha512": "OblOaKb1enXn+dSp7tsx9yjwV+/BEKM9jFhshIkZTwCk7LuTFTp+wSon6rFzuPiIiTGtvVWQNUw2slHjGktJog==",
       "type": "package",
@@ -1217,6 +1500,31 @@
         "lib/netstandard2.1/StarkbankEcdsa.dll",
         "starkbank-ecdsa.1.3.3.nupkg.sha512",
         "starkbank-ecdsa.nuspec"
+      ]
+    },
+    "System.Buffers/4.4.0": {
+      "sha512": "AwarXzzoDwX6BgrhjoJsk6tUezZEozOT5Y9QKF94Gl4JK91I4PIIBkBco9068Y9/Dra8Dkbie99kXB8+1BaYKw==",
+      "type": "package",
+      "path": "system.buffers/4.4.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/netcoreapp2.0/_._",
+        "lib/netstandard1.1/System.Buffers.dll",
+        "lib/netstandard1.1/System.Buffers.xml",
+        "lib/netstandard2.0/System.Buffers.dll",
+        "lib/netstandard2.0/System.Buffers.xml",
+        "ref/netcoreapp2.0/_._",
+        "ref/netstandard1.1/System.Buffers.dll",
+        "ref/netstandard1.1/System.Buffers.xml",
+        "ref/netstandard2.0/System.Buffers.dll",
+        "ref/netstandard2.0/System.Buffers.xml",
+        "system.buffers.4.4.0.nupkg.sha512",
+        "system.buffers.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
       ]
     },
     "System.IO.Packaging/4.7.0": {
@@ -1242,6 +1550,27 @@
         "ref/netstandard2.0/System.IO.Packaging.xml",
         "system.io.packaging.4.7.0.nupkg.sha512",
         "system.io.packaging.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
+    "System.Memory/4.5.3": {
+      "sha512": "3oDzvc/zzetpTKWMShs1AADwZjQ/36HnsufHRPcOjyRAAMLDlu2iD33MBI2opxnezcVUtXyqDXXjoFMOU9c7SA==",
+      "type": "package",
+      "path": "system.memory/4.5.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/netcoreapp2.1/_._",
+        "lib/netstandard1.1/System.Memory.dll",
+        "lib/netstandard1.1/System.Memory.xml",
+        "lib/netstandard2.0/System.Memory.dll",
+        "lib/netstandard2.0/System.Memory.xml",
+        "ref/netcoreapp2.1/_._",
+        "system.memory.4.5.3.nupkg.sha512",
+        "system.memory.nuspec",
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
@@ -1289,6 +1618,31 @@
         "ref/xamarinwatchos10/_._",
         "system.numerics.vectors.4.5.0.nupkg.sha512",
         "system.numerics.vectors.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
+    "System.Runtime.CompilerServices.Unsafe/4.5.2": {
+      "sha512": "wprSFgext8cwqymChhrBLu62LMg/1u92bU+VOwyfBimSPVFXtsNqEWC92Pf9ofzJFlk4IHmJA75EDJn1b2goAQ==",
+      "type": "package",
+      "path": "system.runtime.compilerservices.unsafe/4.5.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/netcoreapp2.0/System.Runtime.CompilerServices.Unsafe.dll",
+        "lib/netcoreapp2.0/System.Runtime.CompilerServices.Unsafe.xml",
+        "lib/netstandard1.0/System.Runtime.CompilerServices.Unsafe.dll",
+        "lib/netstandard1.0/System.Runtime.CompilerServices.Unsafe.xml",
+        "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll",
+        "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.xml",
+        "ref/netstandard1.0/System.Runtime.CompilerServices.Unsafe.dll",
+        "ref/netstandard1.0/System.Runtime.CompilerServices.Unsafe.xml",
+        "ref/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll",
+        "ref/netstandard2.0/System.Runtime.CompilerServices.Unsafe.xml",
+        "system.runtime.compilerservices.unsafe.4.5.2.nupkg.sha512",
+        "system.runtime.compilerservices.unsafe.nuspec",
         "useSharedDesignerContext.txt",
         "version.txt"
       ]

@@ -6,7 +6,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -21,39 +20,32 @@ namespace AppTol
         public Button buttonLimp;
         public Button buttonSair;
 
-        Master master = new Master();
+        
         public Master()
         {
             InitializeComponent();
-            Create();
-        }
+            btn_sair.Clicked += Btn_sair_Clicked;
+            btn_sinc.Clicked += Btn_sinc_Clicked;
 
-        protected void Create()
-        {
-            buttonSair = master.FindByName<Button>("btn_sair");
-            buttonSair.Clicked += ButtonSair_Clicked;
-
-            buttonSincro = master.FindByName<Button>("btn_sinc");
-            buttonSincro.Clicked += ButtonSincro_Clicked;
-        }
-
-     
-  
-        private void ButtonSincro_Clicked(object sender, EventArgs e)
-        {
             
         }
 
-        private async void ButtonSair_Clicked(object sender, EventArgs e)
+        private void Btn_sinc_Clicked(object sender, EventArgs e)
         {
-            bool resposta = await DisplayAlert("Aviso!", "Deseja mesmo encerrar o aplicativo", "Yes", "No");
+           
 
-            if (resposta)
-            {
+        }
+
+        private async void Btn_sair_Clicked(object sender, EventArgs e)
+        {
+            bool resposta = await DisplayAlert("Aviso!", "Deseja realmente encerrar o aplicativo", "Yes","No");
+
+            if (resposta){
 
                 System.Environment.Exit(0);
 
             }
+                
             
         }
 
