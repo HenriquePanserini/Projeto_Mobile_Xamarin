@@ -44,6 +44,10 @@
       "frameworks": {
         "monoandroid11.0": {
           "dependencies": {
+            "Mono.Data.Sqlite.Portable": {
+              "target": "Package",
+              "version": "[1.0.3.5, )"
+            },
             "Xamarin.Essentials": {
               "target": "Package",
               "version": "[1.6.1, )"
@@ -111,6 +115,10 @@
               "target": "Package",
               "version": "[7.0.0, )"
             },
+            "Mono.Data.Sqlite.Portable": {
+              "target": "Package",
+              "version": "[1.0.3.5, )"
+            },
             "NETStandard.Library": {
               "suppressParent": "All",
               "target": "Package",
@@ -125,9 +133,21 @@
               "target": "Package",
               "version": "[8.1.97, )"
             },
+            "SQLite": {
+              "target": "Package",
+              "version": "[3.13.0, )"
+            },
             "SendGrid": {
               "target": "Package",
               "version": "[9.28.1, )"
+            },
+            "System.Data.SQLite": {
+              "target": "Package",
+              "version": "[1.0.116, )"
+            },
+            "System.Data.SQLite.Core": {
+              "target": "Package",
+              "version": "[1.0.116, )"
             },
             "Xam.Plugin.Media": {
               "target": "Package",
@@ -135,11 +155,11 @@
             },
             "Xamarin.Essentials": {
               "target": "Package",
-              "version": "[1.7.3, )"
+              "version": "[1.6.1, )"
             },
             "Xamarin.Forms": {
               "target": "Package",
-              "version": "[5.0.0.2515, )"
+              "version": "[5.0.0.2012, )"
             },
             "sqlite-net-pcl": {
               "target": "Package",
@@ -156,7 +176,7 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.413\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.414\\RuntimeIdentifierGraph.json"
         }
       }
     }
