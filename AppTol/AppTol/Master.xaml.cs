@@ -30,9 +30,10 @@ namespace AppTol
             
         }
 
-        private void Btn_sinc_Clicked(object sender, EventArgs e)
+        private async void Btn_sinc_Clicked(object sender, EventArgs e)
         {
            
+
 
         }
 

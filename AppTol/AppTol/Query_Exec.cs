@@ -698,6 +698,346 @@ namespace AppTol
                     comando.CommandText = "ALTER TABLE vendas ADD checar INTEGER";
                     comando.ExecuteNonQuery();
                 }
+
+                if (dados2y.Columns.Contains("obsped"))
+                {
+                    Console.WriteLine("Campo em banco de dados ja existe" + dados.Columns.Contains("checar"));
+                }
+                else
+                {
+                    comando.CommandText = "ALTER TABLE vendas ADD obsped NVARCHAR(70)";
+                    comando.ExecuteNonQuery();
+                }
+
+                if (dados2y.Columns.Contains("datasincro"))
+                {
+                    Console.WriteLine("Campo em banco de dados ja existe" + dados.Columns.Contains("datasincro"));
+                }
+                else
+                {
+                    comando.CommandText = "ALTER TABLE vendas ADD datasincro DATETIME";
+                    comando.ExecuteNonQuery();
+                }
+
+                DataTable dados2z;
+                dados2z = EXE_QUERY("SELECT * FROM usuario");
+
+                if (dados2z.Columns.Contains("gerente"))
+                {
+                    Console.WriteLine("Campo em banco de dados ja existe" + dados.Columns.Contains("gerente"));
+                }
+                else
+                {
+                    comando.CommandText = "ALTER TABLE usuario ADD gerente INTEGER";
+                    comando.ExecuteNonQuery();
+                }
+
+                if (dados2z.Columns.Contains("descvendas"))
+                {
+                    Console.WriteLine("Campo em banco de dados ja existe" + dados.Columns.Contains("descvendas"));
+                }
+                else
+                {
+                    comando.CommandText = "ALTER TABLE usuario ADD descvendas DECIMAL(10,2)";
+                    comando.ExecuteNonQuery();
+                }
+
+                DataTable dadosBkp;
+                dadosBkp = EXE_QUERY("SELECT * FROM  vendasprd_BKP");
+
+                if (dadosBkp.Columns.Contains("nrovendabco"))
+                {
+                    Console.WriteLine("Campo em banco de dados ja existe" + dados.Columns.Contains("nrovendabco"));
+                }
+                else
+                {
+                    comando.CommandText = "ALTER TABLE vendasprd_BKP ADD nrovendabco INTEGER";
+                    comando.ExecuteNonQuery();
+                }
+
+                if (dadosBkp.Columns.Contains("seq"))
+                {
+                    Console.WriteLine("Campo em banco de dados ja existe" + dados.Columns.Contains("seq"));
+                }
+                else
+                {
+                    comando.CommandText = "ALTER TABLE vendasprd_BKP ADD seq INTEGER";
+                    comando.ExecuteNonQuery();
+                }
+
+                DataTable dadosBkp2;
+                dadosBkp2 = EXE_QUERY("SELECT * FROM vendas_BKP");
+
+                if (dadosBkp2.Columns.Contains("datasincro"))
+                {
+                    Console.WriteLine("Campo em banco de dados ja existe" + dados.Columns.Contains("datasincro"));
+                }
+                else
+                {
+                    comando.CommandText = "ALTER TABLE vendas_BKP ADD datasincro DATETIME";
+                    comando.ExecuteNonQuery();
+                }
+
+                if (dadosBkp2.Columns.Contains("id_formapgto"))
+                {
+                    Console.WriteLine("Campo em banco de dados ja existe" + dados.Columns.Contains(""));
+                }
+                else
+                {
+                    comando.CommandText = "ALTER TABLE vendas_BKP ADD id_formapgto INTEGER";
+                    comando.ExecuteNonQuery();
+                }
+
+                if (dadosBkp2.Columns.Contains("tipopagto"))
+                {
+                    Console.WriteLine("Campo em banco de dados ja existe" + dados.Columns.Contains("´tipopagto"));
+                }
+                else
+                {
+                    comando.CommandText = "ALTER TABLE vendas_BKP ADD tipopagto NVARCHAR(15)";
+                    comando.ExecuteNonQuery();
+                }
+
+                if (dadosBkp2.Columns.Contains("nrovendabco"))
+                {
+                    Console.WriteLine("Campo em banco de dados ja existe" + dados.Columns.Contains("nrovendabco"));
+                }
+                else
+                {
+                    comando.CommandText = "ALTER TABLE venda_BKP ADD nrovendabco INTEGER";
+                    comando.ExecuteNonQuery();
+                }
+
+                if (dadosBkp2.Columns.Contains("checar"))
+                {
+                    Console.WriteLine("Campo em banco de dados ja existe" + dadosBkp2.Columns.Contains("checar"));
+                }
+                else
+                {
+                    comando.CommandText = "ALTER TABLE venda_BKP ADD checar INTEGER";
+                    comando.ExecuteNonQuery();
+                }
+
+                if (dadosBkp2.Columns.Contains("obsped"))
+                {
+                    Console.WriteLine("Campo em banco de dados ja existe" + dadosBkp2.Columns.Contains("obsped"));
+                }
+                else
+                {
+                    comando.CommandText = "ALTER TABLE venda_BKP ADD obsped NVARCHAR(200)";
+                    comando.ExecuteNonQuery();
+                }
+
+                comando.CommandText =
+                    "CREATE TABLE IF NOT EXISTS sincronizar(" +
+                    "id_seq INTEGER not null default 0, " +
+                    "data DATETIME)";
+                comando.ExecuteNonQuery();
+
+                comando.CommandText =
+                    "CREATE TABLE IF NOT EXISTS nvenda(" +
+                    "id_venda INTEGER not null default 0, " +
+                    "data DATETIME)";
+                comando.ExecuteNonQuery();
+
+                comando.CommandText =
+                    "CREATE TABLE IF NOT EXISTIS nvenda_or(" +
+                    "id_venda INTEGER not null default 0, " +
+                    "data DATETIME)";
+                comando.ExecuteNonQuery();
+
+                comando.CommandText =
+                    "CREATE TABLE IF NOT EXISTS tipopgto(" +
+                    "id_tipopgto INTEGER not null default 0, " +
+                    "descricao NVARCHAR(50))";
+                comando.ExecuteNonQuery();
+
+                comando.CommandText =
+                    "CREATE TABLE IF NOT EXISTS tmptipopgto(" +
+                    "id_tipopgto INTEGER not null default 0, " +
+                    "descricao NVARCHAR(50))";
+                comando.ExecuteNonQuery();
+
+                comando.CommandText =
+                    "CREATE TABLE IF NOT EXISTS parametrocli(" +
+                    "nome NVARCHAR(80), " +
+                    "endereco NVARCAHR(80), " +
+                    "bairro NVARCHAR(80), " +
+                    "cidade NVARCHAR(60), " +
+                    "fone NVARCHAR(60))";
+                comando.ExecuteNonQuery();
+
+                comando.CommandText =
+                    "CREATE TABLE IF NOT EXISTS tmp_vendas_prod(" +
+                    "id_produto INTEGER not null default 0, " +
+                    "descricao NVARCHAR(50)," +
+                    "quantidade DECIMAL(10, 2), " +
+                    "preco DECIMAL(10,2), " +
+                    "desconto DECIMAL(10,2), " +
+                    "precodesconto DECIMAL(10,2), " +
+                    "total DECIMAL(10,2))";
+                comando.ExecuteNonQuery();
+
+                comando.CommandText =
+                    "CREATE TABLE IF NOT EXISTS tmp_vendas_prod_or(" +
+                    "id_produto INTEGER not null default 0, " +
+                    "descricao NVARCHAR(50), " +
+                    "quantidade DECIMAL(10,2), " +
+                    "preco DECIMAL(10,2), " +
+                    "desconto DECIMAL(10,2), " +
+                    "precodesconto DECIMAL(10,2), " +
+                    "total DECIMAL(10,2))";
+                comando.ExecuteNonQuery();
+
+                comando.CommandText =
+                    "CREATE TABLE IF NOT EXISTS vendasprd_or(" +
+                    "id_pedido INTEGER not null default 0, " +
+                    "id_produto INTEGER, " +
+                    "descricao NVARCHAR(30), " +
+                    "quantidade DECIMAL(10,2), " +
+                    "preco DECIMAL(10,2), " +
+                    "desconto DECIMAL(10,2), " +
+                    "precodesconto DECIMAL(10,2), " +
+                    "total DECIMAL(10,2))";
+                comando.ExecuteNonQuery();
+
+                comando.CommandText =
+                    "CREATE TABLE IF NOT EXISTS vendas_or (" +
+                    "id_pedido INTEGER not null default 0, " +
+                    "id_cliente INTEGER, " +
+                    "nome NVARCHAR(30), " +
+                    "id_pgto INTEGER, " +
+                    "desconto DECIMAL(10,2), " +
+                    "total DECIMAL(10,2), " +
+                    "data DATETIME)";
+                comando.ExecuteNonQuery();
+
+                comando.CommandText =
+                    "CREATE TABLE IF NOT EXISTS receber(" +
+                    "titulo NVARCHAR(10), " +
+                    "emissao DATETIME, " +
+                    "vencimento DATETIME, " +
+                    "valor DECIMAL(10,2), " +
+                    "nome NVARCHAR(20))";
+                comando.ExecuteNonQuery();
+
+                comando.CommandText =
+                    "CREATE TABLE IF NOT EXISTS vendasprd_BKP(" +
+                    "id_pedido INTEGER not null default 0, " +
+                    "id_produto INTEGER, " +
+                    "descricao NVARCHAR(30), " +
+                    "quantidade DECIMAL(10,2), " +
+                    "preco DECIMAL(10,2), " +
+                    "desconto DECIMAL(10,2), " +
+                    "precodesconto DECIMAL(10,2), " +
+                    "total DECIMAL(10,2))";
+                comando.ExecuteNonQuery();
+
+                comando.CommandText =
+                    "CREATE TABLE IF NOT EXISTS vendas_BKP(" +
+                    "id_pedido INTEGER not null default 0, " +
+                    "id_cliente INTEGER, " +
+                    "nome NVARCHAR(30), " +
+                    "id_pgto INTEGER,  " +
+                    "desconto DECIMAL(10,2), " +
+                    "total DECIMAL(10,2), " +
+                    "data DATETIME)";
+                comando.ExecuteNonQuery();
+
+                comando.CommandText =
+                    "CREATE TABLE IF NOT EXISTS rel_vendas(" +
+                    "codigo INTEGER not null default 0, " +
+                    "id_cliente INTEGER, " +
+                    "descricao NVARCHAR(30), " +
+                    "cupom INTEGER, " +
+                    "total DECIMAL(10,2), " +
+                    "data DATETIME, " +
+                    "preco DECIMAL(10,2), " +
+                    "quantidade DECIMAL(10,2), " +
+                    "codform INTEGER)";
+                comando.ExecuteNonQuery();
+
+                DataTable dados3;
+                dados3 = EXE_QUERY("SELECT * FROM vendas_or");
+
+                if (dados3.Columns.Contains("datasincro"))
+                {
+                    Console.WriteLine("Campo em banco de dados ja existe" + dados3.Columns.Contains("datasincro"));
+                }
+                else
+                {
+                    comando.CommandText = "ALTER TABLE vendas_or ADD datasincro DATETIME";
+                    comando.ExecuteNonQuery();
+                }
+
+                if (dados3.Columns.Contains("id_formpgto"))
+                {
+                    Console.WriteLine("Campo em banco de dados ja existe" + dadosBkp2.Columns.Contains("id_formpgto"));
+                }
+                else
+                {
+                    comando.CommandText = "ALTER TABLE vendas_or ADD id_formapgto INTEGER";
+                    comando.ExecuteNonQuery();
+                }
+
+                if (dados3.Columns.Contains("tipopagto"))
+                {
+                    Console.WriteLine("Campo em banco de dados ja existe" + dadosBkp2.Columns.Contains("tipopagto"));
+                }
+                else
+                {
+                    comando.CommandText = "ALTER TABLE vendas_or ADD tipopagto NVARCHAR(15)";
+                    comando.ExecuteNonQuery();
+                }
+
+                DateTime data = DateTime.Now.AddDays(-5);
+                DateTime data1 = DateTime.MinValue;
+
+                List<SQLite3_parametros> parametrox = new List<SQLite3_parametros>();
+                parametrox.Add(new SQLite3_parametros("@datasinc", DateTime.Now.AddDays(-30)));
+                parametrox.Add(new SQLite3_parametros("@datasincx", DateTime.MinValue));
+
+                int cv1 = 0;
+
+                dados1 = EXE_QUERY("SELECT * FROM vendas WHERE datasincro < @datasinc AND datasincro > @datasincx", parametrox);
+                int xi = 0, id_pedido;
+
+                foreach(DataRow linha in dados1.Rows)
+                {
+                    id_pedido = Convert.ToInt32(dados1.Rows[xi]["id_pedido"]);
+
+                    EXE_QUERY("DELETE FROM vendas WHERE id_pedido = " + id_pedido);
+                    EXE_QUERY("DELETE FROM vendasprd WHERE id_pedido = " + id_pedido);
+                    xi = xi + 1;
+                }
+
+                DataTable dados4;
+                dados4 = EXE_QUERY("SELECT * FROM parametros");
+
+                if (dados4.Columns.Contains("vendasdesc"))
+                {
+                    Console.WriteLine("Campo em banco de dados ja existe" + dadosBkp2.Columns.Contains("vendasdesc"));
+                }
+                else
+                {
+                    comando.CommandText = "ALTER TABLE parametro ADD vendasdesc INTEGER";
+                    comando.ExecuteNonQuery();
+
+                }
+
+                if (dados4.Rows.Count != 0)
+                {
+
+                    if (!DBNull.Value.Equals(dados4.Rows[0]["vendasdesc"]))
+                    {
+                        vars.parvenda = Convert.ToInt32(dados4.Rows[0]["vendasdesc"]);
+                    }
+                    else
+                    {
+                        vars.parvenda = 0;
+                    }
+                }
+  
             }
 
         }
@@ -719,6 +1059,21 @@ namespace AppTol
             comando.Dispose();
             conexao.Clone();
             conexao.Dispose();
+        }
+
+        public static void NOM_QUERY(string query)
+        {
+
+            SqliteConnection ligacao = new SqliteConnection("DataSource = " + base_dados);
+            ligacao.Open();
+
+            SqliteCommand comando = new SqliteCommand(query, ligacao);
+            comando.ExecuteNonQuery();
+
+            comando.Dispose();
+            ligacao.Clone();
+            ligacao.Dispose();
+
         }
 
         public static DataTable EXE_QUERY(string query, List<SQLite3_parametros> parametros)
@@ -758,6 +1113,61 @@ namespace AppTol
             dados = new DataTable();
             adapter.Fill(dados);
             return dados;
+
+        }
+
+        public static int ID_DISPONIVEL(string tabela, string coluna)
+        {
+            int valor = 0;
+
+            SqliteConnection ligacao = new SqliteConnection("Data source = " + base_dados);
+            ligacao.Open();
+
+            string query = "SELECT MAX(" + coluna + ") AS maxid FROM " + tabela;
+
+            DataTable dados = new DataTable();
+
+            SqliteDataAdapter adaptador = new SqliteDataAdapter(query, ligacao);
+
+            adaptador.Fill(dados);
+
+            if(dados.Rows.Count != 0)
+            {
+                if (!DBNull.Value.Equals(dados.Rows[0][0]))
+                {
+                    valor = Convert.ToInt32(dados.Rows[0][0]) + 1;
+                }
+            }
+
+            ligacao.Close();
+            ligacao.Dispose();
+
+            return valor;
+        }
+
+        public static int ID_ULTIMO(string tabela, string coluna)
+        {
+
+            int valor = 0;
+
+            SqliteConnection ligacao = new SqliteConnection("Data source =" + base_dados);
+            ligacao.Open();
+
+            string query = "SELECT MAX(" + coluna + ") AS maxid FROM " + tabela;
+
+            SqliteDataAdapter adaptador = new SqliteDataAdapter(query, ligacao);
+            adaptador.Fill(dados);
+
+            if(dados.Rows.Count != 0)
+            {
+                if (!DBNull.Value.Equals(dados.Rows[0][0]))
+                    valor = Convert.ToInt32(dados.Rows[0][0]);
+            }
+
+            ligacao.Close();
+            ligacao.Dispose();
+
+            return valor;
 
         }
     }
