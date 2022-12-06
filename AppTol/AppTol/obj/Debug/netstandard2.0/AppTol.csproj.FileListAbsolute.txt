@@ -12,10 +12,7 @@ C:\Users\User\source\repos\AppTol\AppTol\AppTol\obj\Debug\netstandard2.0\ref\App
 C:\Users\User\source\repos\AppTol\AppTol\AppTol\obj\Debug\netstandard2.0\AppTol.pdb
 C:\Users\User\source\repos\AppTol\AppTol\AppTol\bin\Debug\netstandard2.0\AppTol.deps.json
 C:\Users\User\source\repos\AppTol\AppTol\AppTol\bin\Debug\netstandard2.0\AppTol.dll
-C:\Users\User\source\repos\AppTol\AppTol\AppTol\bin\Debug\netstandard2.0\ref\AppTol.dll
 C:\Users\User\source\repos\AppTol\AppTol\AppTol\bin\Debug\netstandard2.0\AppTol.pdb
 C:\Users\User\source\repos\AppTol\AppTol\AppTol\obj\Debug\netstandard2.0\XamlC.stamp
-C:\Users\User\source\repos\AppTol\AppTol\AppTol\bin\Debug\netstandard2.0\Mono.Android.dll
-C:\Users\User\source\repos\AppTol\AppTol\AppTol\bin\Debug\netstandard2.0\Mono.Android.pdb
-C:\Users\User\source\repos\AppTol\AppTol\AppTol\bin\Debug\netstandard2.0\Mono.Android.xml
-C:\Users\User\source\repos\AppTol\AppTol\AppTol\obj\Debug\netstandard2.0\AppTol.csproj.CopyComplete
+C:\Users\User\source\repos\AppTol\AppTol\AppTol\obj\Debug\netstandard2.0\refint\AppTol.dll
+C:\Users\User\source\repos\AppTol\AppTol\AppTol\obj\Debug\netstandard2.0\Views\LoginUI.xaml.g.cs

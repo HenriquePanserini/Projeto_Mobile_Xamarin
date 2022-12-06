@@ -12,13 +12,12 @@ namespace AppTol
     public partial class MainPage : MasterDetailPage
     {
         
-        public static MasterDetailPage masterDetail { get; set; }
+        public static FlyoutPage masterDetail { get; set; }
         public MainPage()
         {
             InitializeComponent();
             this.Master = new Master();
             this.Detail = new NavigationPage(new Detail());
-            App.masterDetail = this;
         }
     }
 }

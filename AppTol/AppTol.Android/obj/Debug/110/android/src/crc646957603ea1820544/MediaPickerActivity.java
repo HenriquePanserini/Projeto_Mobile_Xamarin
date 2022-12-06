@@ -24,8 +24,9 @@ public class MediaPickerActivity
 	public MediaPickerActivity ()
 	{
 		super ();
-		if (getClass () == MediaPickerActivity.class)
+		if (getClass () == MediaPickerActivity.class) {
 			mono.android.TypeManager.Activate ("Plugin.Media.MediaPickerActivity, Plugin.Media", "", this, new java.lang.Object[] {  });
+		}
 	}
 
 

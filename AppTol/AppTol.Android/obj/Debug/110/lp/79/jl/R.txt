@@ -1,3 +1,10 @@
+int anim fragment_fast_out_extra_slow_in 0x0
+int animator fragment_close_enter 0x0
+int animator fragment_close_exit 0x0
+int animator fragment_fade_enter 0x0
+int animator fragment_fade_exit 0x0
+int animator fragment_open_enter 0x0
+int animator fragment_open_exit 0x0
 int attr alpha 0x0
 int attr font 0x0
 int attr fontProviderAuthority 0x0
@@ -36,7 +43,6 @@ int dimen notification_small_icon_size_as_large 0x0
 int dimen notification_subtext_size 0x0
 int dimen notification_top_pad 0x0
 int dimen notification_top_pad_large_text 0x0
-int drawable abc_vector_test 0x0
 int drawable notification_action_background 0x0
 int drawable notification_bg 0x0
 int drawable notification_bg_low 0x0
@@ -92,6 +98,7 @@ int id blocking 0x0
 int id chronometer 0x0
 int id dialog_button 0x0
 int id forever 0x0
+int id fragment_container_view_tag 0x0
 int id icon 0x0
 int id icon_group 0x0
 int id info 0x0
@@ -104,6 +111,7 @@ int id notification_main_column 0x0
 int id notification_main_column_container 0x0
 int id right_icon 0x0
 int id right_side 0x0
+int id special_effects_controller_view_tag 0x0
 int id tag_accessibility_actions 0x0
 int id tag_accessibility_clickable_spans 0x0
 int id tag_accessibility_heading 0x0
@@ -116,6 +124,10 @@ int id text 0x0
 int id text2 0x0
 int id time 0x0
 int id title 0x0
+int id view_tree_lifecycle_owner 0x0
+int id view_tree_saved_state_registry_owner 0x0
+int id view_tree_view_model_store_owner 0x0
+int id visible_removing_fragment_view_tag 0x0
 int integer status_bar_notification_info_maxnum 0x0
 int layout custom_dialog 0x0
 int layout notification_action 0x0
@@ -132,21 +144,6 @@ int style TextAppearance_Compat_Notification_Time 0x0
 int style TextAppearance_Compat_Notification_Title 0x0
 int style Widget_Compat_NotificationActionContainer 0x0
 int style Widget_Compat_NotificationActionText 0x0
-int[] styleable AnimatedStateListDrawableCompat { 0x1010196, 0x101011c, 0x101030c, 0x101030d, 0x1010195, 0x1010194 }
-int styleable AnimatedStateListDrawableCompat_android_constantSize 0
-int styleable AnimatedStateListDrawableCompat_android_dither 1
-int styleable AnimatedStateListDrawableCompat_android_enterFadeDuration 2
-int styleable AnimatedStateListDrawableCompat_android_exitFadeDuration 3
-int styleable AnimatedStateListDrawableCompat_android_variablePadding 4
-int styleable AnimatedStateListDrawableCompat_android_visible 5
-int[] styleable AnimatedStateListDrawableItem { 0x1010199, 0x10100d0 }
-int styleable AnimatedStateListDrawableItem_android_drawable 0
-int styleable AnimatedStateListDrawableItem_android_id 1
-int[] styleable AnimatedStateListDrawableTransition { 0x1010199, 0x101044a, 0x101044b, 0x1010449 }
-int styleable AnimatedStateListDrawableTransition_android_drawable 0
-int styleable AnimatedStateListDrawableTransition_android_fromId 1
-int styleable AnimatedStateListDrawableTransition_android_reversible 2
-int styleable AnimatedStateListDrawableTransition_android_toId 3
 int[] styleable ColorStateListItem { 0x0, 0x101031f, 0x10101a5 }
 int styleable ColorStateListItem_alpha 0
 int styleable ColorStateListItem_android_alpha 1
@@ -169,6 +166,13 @@ int styleable FontFamilyFont_fontStyle 6
 int styleable FontFamilyFont_fontVariationSettings 7
 int styleable FontFamilyFont_fontWeight 8
 int styleable FontFamilyFont_ttcIndex 9
+int[] styleable Fragment { 0x10100d0, 0x1010003, 0x10100d1 }
+int styleable Fragment_android_id 0
+int styleable Fragment_android_name 1
+int styleable Fragment_android_tag 2
+int[] styleable FragmentContainerView { 0x1010003, 0x10100d1 }
+int styleable FragmentContainerView_android_name 0
+int styleable FragmentContainerView_android_tag 1
 int[] styleable GradientColor { 0x101020b, 0x10101a2, 0x10101a3, 0x101019e, 0x1010512, 0x1010513, 0x10101a4, 0x101019d, 0x1010510, 0x1010511, 0x1010201, 0x10101a1 }
 int styleable GradientColor_android_centerColor 0
 int styleable GradientColor_android_centerX 1
@@ -185,12 +189,3 @@ int styleable GradientColor_android_type 11
 int[] styleable GradientColorItem { 0x10101a5, 0x1010514 }
 int styleable GradientColorItem_android_color 0
 int styleable GradientColorItem_android_offset 1
-int[] styleable StateListDrawable { 0x1010196, 0x101011c, 0x101030c, 0x101030d, 0x1010195, 0x1010194 }
-int styleable StateListDrawable_android_constantSize 0
-int styleable StateListDrawable_android_dither 1
-int styleable StateListDrawable_android_enterFadeDuration 2
-int styleable StateListDrawable_android_exitFadeDuration 3
-int styleable StateListDrawable_android_variablePadding 4
-int styleable StateListDrawable_android_visible 5
-int[] styleable StateListDrawableItem { 0x1010199 }
-int styleable StateListDrawableItem_android_drawable 0

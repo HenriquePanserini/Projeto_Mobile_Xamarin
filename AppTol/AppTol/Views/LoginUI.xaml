@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppTol.Views.LoginUI"
+             BackgroundImageSource="BackApp.png">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="Center" HorizontalOptions="FillAndExpand" Padding="40" TranslationY="-20">
+            <Image
+               Source="definicao.png"
+               
+            />
+            <Image
+                Source="logo"
+                HeightRequest="145"
+            />
+            <Entry Placeholder="Usuario" TextColor="White" PlaceholderColor="Silver" x:Name="Entry_user"></Entry>
+            <Entry Placeholder="Senha" IsPassword="True" TextColor="White" PlaceholderColor="Silver" x:Name="Entry_pass"></Entry>
+            <Button
+                Text="Acessar"
+                BackgroundColor="Transparent"
+                TextColor="White"
+                BorderColor="Silver"
+                BorderWidth="1.5"
+                CornerRadius="40"
+                Clicked="Button_Clicked"
+                
+             />
+            <Label HorizontalOptions="Center">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="Nao consegue acessar? " TextColor="White"/>
+                        <Span Text="Suporte" TextDecorations="Underline" FontAttributes="Bold" TextColor="Silver"/>
+                    </FormattedString>
+                </Label.FormattedText>
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                </Label.GestureRecognizers>
+            </Label>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,4 +1,4 @@
-﻿using Android.OS;
+﻿using static Xamarin.Forms.PlatformConfiguration.Android;
 using DocumentFormat.OpenXml.Drawing;
 using SendGrid.Helpers.Mail;
 using System;
@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using AppTol.Views;
+
 
 namespace AppTol
 {
@@ -20,7 +22,6 @@ namespace AppTol
         public Button buttonLimp;
         public Button buttonSair;
 
-        
         public Master()
         {
             InitializeComponent();
@@ -32,13 +33,14 @@ namespace AppTol
 
         private async void Btn_sinc_Clicked(object sender, EventArgs e)
         {
-           
 
+            ConsultaCliente.Clientes_pesquisa();
 
         }
 
         private async void Btn_sair_Clicked(object sender, EventArgs e)
         {
+
             bool resposta = await DisplayAlert("Aviso!", "Deseja realmente encerrar o aplicativo", "Yes","No");
 
             if (resposta){
@@ -47,7 +49,6 @@ namespace AppTol
 
             }
                 
-            
         }
 
     }

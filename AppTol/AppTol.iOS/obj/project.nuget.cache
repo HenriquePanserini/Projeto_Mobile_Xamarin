@@ -1,12 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "n6XbUOK+uVSEt0XhOrX1IgucuesTGQTRemr5YAx65L8msI/tf+dmYz/9B9lxTs35LhcM+Ebe8nfuddx9WRl0PA==",
+  "dgSpecHash": "7P4xMKYMGiFMaJ/GUxH7Oqs5yc/k55jfijxHhyCsTyL3Xlz4+DbY+Z9Sk5r8wy/+ZSZ4U8UhSE59JkdlL4UbcA==",
   "success": true,
   "projectFilePath": "C:\\Users\\User\\source\\repos\\AppTol\\AppTol\\AppTol.iOS\\AppTol.iOS.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\User\\.nuget\\packages\\documentformat.openxml\\2.18.0\\documentformat.openxml.2.18.0.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\entityframework\\6.4.4\\entityframework.6.4.4.nupkg.sha512",
-    "C:\\Users\\User\\.nuget\\packages\\fluentvalidation\\11.2.2\\fluentvalidation.11.2.2.nupkg.sha512",
+    "C:\\Users\\User\\.nuget\\packages\\fluentvalidation\\11.4.0\\fluentvalidation.11.4.0.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\microsoft.data.sqlite.core\\7.0.0\\microsoft.data.sqlite.core.7.0.0.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\mono.data.sqlite.portable\\1.0.3.5\\mono.data.sqlite.portable.1.0.3.5.nupkg.sha512",
@@ -38,8 +38,8 @@
     "C:\\Users\\User\\.nuget\\packages\\system.security.permissions\\4.7.0\\system.security.permissions.4.7.0.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\system.security.principal.windows\\4.7.0\\system.security.principal.windows.4.7.0.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\xam.plugin.media\\5.0.1\\xam.plugin.media.5.0.1.nupkg.sha512",
-    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\xamarin.essentials\\1.6.1\\xamarin.essentials.1.6.1.nupkg.sha512",
-    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\xamarin.forms\\5.0.0.2012\\xamarin.forms.5.0.0.2012.nupkg.sha512"
+    "C:\\Users\\User\\.nuget\\packages\\xamarin.essentials\\1.7.3\\xamarin.essentials.1.7.3.nupkg.sha512",
+    "C:\\Users\\User\\.nuget\\packages\\xamarin.forms\\5.0.0.2515\\xamarin.forms.5.0.0.2515.nupkg.sha512"
   ],
   "logs": []
 }
