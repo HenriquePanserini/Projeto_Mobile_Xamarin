@@ -15,16 +15,10 @@
      limitations under the License.
 -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="androidx.media" >
+    package="androidx.slidingpanelayout" >
 
     <uses-sdk
         android:minSdkVersion="14"
-        android:targetSdkVersion="30" />
-
-    <queries>
-        <intent>
-            <action android:name="android.media.browse.MediaBrowserService" />
-        </intent>
-    </queries>
+        android:targetSdkVersion="29" />
 
 </manifest>

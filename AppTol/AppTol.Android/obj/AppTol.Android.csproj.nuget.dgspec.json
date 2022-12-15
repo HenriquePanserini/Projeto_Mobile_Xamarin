@@ -46,9 +46,9 @@
               "target": "Package",
               "version": "[1.0.3.5, )"
             },
-            "Xamarin.Android.Support.Compat": {
+            "Newtonsoft.Json": {
               "target": "Package",
-              "version": "[28.0.0.3, )"
+              "version": "[13.0.2, )"
             },
             "Xamarin.Essentials": {
               "target": "Package",
@@ -126,6 +126,10 @@
               "version": "[2.0.3, )",
               "autoReferenced": true
             },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.2, )"
+            },
             "PCLExt.FileStorage": {
               "target": "Package",
               "version": "[1.4.1.1, )"
@@ -134,25 +138,21 @@
               "target": "Package",
               "version": "[8.1.97, )"
             },
-            "SQLite": {
+            "Rg.Plugins.Popup": {
               "target": "Package",
-              "version": "[3.13.0, )"
+              "version": "[2.1.0, )"
             },
             "SendGrid": {
               "target": "Package",
               "version": "[9.28.1, )"
             },
-            "System.Data.SQLite": {
-              "target": "Package",
-              "version": "[1.0.116, )"
-            },
-            "System.Data.SQLite.Core": {
-              "target": "Package",
-              "version": "[1.0.116, )"
-            },
             "Xam.Plugin.Media": {
               "target": "Package",
               "version": "[5.0.1, )"
+            },
+            "Xamarin.CommunityToolkit": {
+              "target": "Package",
+              "version": "[2.0.5, )"
             },
             "Xamarin.Essentials": {
               "target": "Package",
@@ -161,6 +161,14 @@
             "Xamarin.Forms": {
               "target": "Package",
               "version": "[5.0.0.2515, )"
+            },
+            "ZXing.Net.Mobile": {
+              "target": "Package",
+              "version": "[2.4.1, )"
+            },
+            "ZXing.Net.Mobile.Forms": {
+              "target": "Package",
+              "version": "[2.4.1, )"
             },
             "sqlite-net-pcl": {
               "target": "Package",

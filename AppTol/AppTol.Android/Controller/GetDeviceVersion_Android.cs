@@ -9,7 +9,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using Xamarin.Forms;
-using AppTol.Controller;
 using AppTol.Droid.Controller;
 using AppTol.Models;
 

@@ -1,9 +1,7 @@
 C:\Users\User\source\repos\AppTol\AppTol\AppTol\obj\Debug\netstandard2.0\AppTol.csproj.AssemblyReference.cache
 C:\Users\User\source\repos\AppTol\AppTol\AppTol\obj\Debug\netstandard2.0\AppTol.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\User\source\repos\AppTol\AppTol\AppTol\obj\Debug\netstandard2.0\App.xaml.g.cs
-C:\Users\User\source\repos\AppTol\AppTol\AppTol\obj\Debug\netstandard2.0\Detail.xaml.g.cs
 C:\Users\User\source\repos\AppTol\AppTol\AppTol\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
-C:\Users\User\source\repos\AppTol\AppTol\AppTol\obj\Debug\netstandard2.0\Master.xaml.g.cs
 C:\Users\User\source\repos\AppTol\AppTol\AppTol\obj\Debug\netstandard2.0\AppTol.AssemblyInfoInputs.cache
 C:\Users\User\source\repos\AppTol\AppTol\AppTol\obj\Debug\netstandard2.0\AppTol.AssemblyInfo.cs
 C:\Users\User\source\repos\AppTol\AppTol\AppTol\obj\Debug\netstandard2.0\AppTol.csproj.CoreCompileInputs.cache
@@ -16,3 +14,9 @@ C:\Users\User\source\repos\AppTol\AppTol\AppTol\bin\Debug\netstandard2.0\AppTol.
 C:\Users\User\source\repos\AppTol\AppTol\AppTol\obj\Debug\netstandard2.0\XamlC.stamp
 C:\Users\User\source\repos\AppTol\AppTol\AppTol\obj\Debug\netstandard2.0\refint\AppTol.dll
 C:\Users\User\source\repos\AppTol\AppTol\AppTol\obj\Debug\netstandard2.0\Views\LoginUI.xaml.g.cs
+C:\Users\User\source\repos\AppTol\AppTol\AppTol\obj\Debug\netstandard2.0\Views\Cad_cliente.xaml.g.cs
+C:\Users\User\source\repos\AppTol\AppTol\AppTol\obj\Debug\netstandard2.0\Views\Detail.xaml.g.cs
+C:\Users\User\source\repos\AppTol\AppTol\AppTol\obj\Debug\netstandard2.0\Views\Details_cliente.xaml.g.cs
+C:\Users\User\source\repos\AppTol\AppTol\AppTol\obj\Debug\netstandard2.0\Views\Lista_cliente.xaml.g.cs
+C:\Users\User\source\repos\AppTol\AppTol\AppTol\obj\Debug\netstandard2.0\Views\Master.xaml.g.cs
+C:\Users\User\source\repos\AppTol\AppTol\AppTol\obj\Debug\netstandard2.0\Views\IPconfig.xaml.g.cs

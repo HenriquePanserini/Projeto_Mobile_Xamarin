@@ -4,18 +4,25 @@
              x:Class="AppTol.Views.LoginUI"
              BackgroundImageSource="BackApp.png">
     <ContentPage.Content>
-        <StackLayout VerticalOptions="Center" HorizontalOptions="FillAndExpand" Padding="40" TranslationY="-20">
-            <Image
-               Source="definicao.png"
-               
+        <StackLayout VerticalOptions="Center" HorizontalOptions="FillAndExpand" Padding="0, 100" TranslationY="-20" BackgroundColor="Transparent" Margin="0">
+            <ImageButton
+                    Source="definicoes.png"
+                    Clicked="ImageButton_Clicked"
+                    WidthRequest="15"
+                    HeightRequest="35"
+                    BackgroundColor="Transparent"
+                    TranslationX="150"
+                    TranslationY="-100"
             />
             <Image
                 Source="logo"
-                HeightRequest="145"
+                BackgroundColor="Transparent" 
             />
-            <Entry Placeholder="Usuario" TextColor="White" PlaceholderColor="Silver" x:Name="Entry_user"></Entry>
-            <Entry Placeholder="Senha" IsPassword="True" TextColor="White" PlaceholderColor="Silver" x:Name="Entry_pass"></Entry>
+            <Entry Placeholder="Usuario" TextColor="White" PlaceholderColor="Silver" x:Name="Entry_user" VerticalOptions="Center" HorizontalOptions="CenterAndExpand" WidthRequest="270"></Entry>
+            <Entry Placeholder="Senha" IsPassword="True" TextColor="White" PlaceholderColor="Silver" x:Name="Entry_pass" VerticalOptions="Center"  HorizontalOptions="CenterAndExpand" WidthRequest="270"></Entry>
             <Button
+                VerticalOptions="Center"
+                HorizontalOptions="CenterAndExpand"
                 Text="Acessar"
                 BackgroundColor="Transparent"
                 TextColor="White"
@@ -23,10 +30,12 @@
                 BorderWidth="1.5"
                 CornerRadius="40"
                 Clicked="Button_Clicked"
+                WidthRequest="250"
+                TranslationY="10"
                 
              />
-            <Label HorizontalOptions="Center">
-                <Label.FormattedText>
+            <Label HorizontalOptions="Center" TranslationY="10">
+                <Label.FormattedText >
                     <FormattedString>
                         <Span Text="Nao consegue acessar? " TextColor="White"/>
                         <Span Text="Suporte" TextDecorations="Underline" FontAttributes="Bold" TextColor="Silver"/>

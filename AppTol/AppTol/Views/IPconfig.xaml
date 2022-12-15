@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppTol.Views.IPconfig"
+             BackgroundColor="SteelBlue">
+    <ContentPage.Content>
+        <Frame VerticalOptions="Center"
+               HorizontalOptions="CenterAndExpand"
+               CornerRadius="10"
+               Padding="30"
+               Margin="0"
+               WidthRequest="260"   
+        >
+            <StackLayout  VerticalOptions="Center"
+                          HorizontalOptions="CenterAndExpand" 
+                >
+                <Image
+                        Source="redeDePessoas.png"
+                        VerticalOptions="Start"
+                        HorizontalOptions="StartAndExpand"
+                        TranslationY="-21"
+                        TranslationX="-22"
+                        Margin="0"      
+                />
+                <Label Text="Configuração de Conexao"
+                        FontSize="18"
+                        TranslationY="-52"
+                        TranslationX="13"
+                        FontFamily="Ariel"
+                        VerticalOptions="Start"
+                        HorizontalOptions="StartAndExpand"
+                        Margin="0"
+                        Padding="0"
+                     />
+                <Label  Text="IP: "
+                        FontSize="16"
+                        TranslationX="-15"
+                        TranslationY="-20"
+                        Margin="0"
+                        Padding="0"
+                />
+                <Entry Placeholder="000.000.000:0000"  
+                       PlaceholderColor="Silver" 
+                       TextColor="Black" 
+                       x:Name="IP_entry"
+                       TranslationY="-60"
+                       TranslationX="15"
+                       WidthRequest="40" 
+                       Margin="0"
+                              
+                ></Entry>
+                <Label  Text="Vend.:"
+                        TranslationX="-40"
+                        TranslationY="-55"
+                        FontSize="16"
+                        Margin="0"
+                        Padding="0"
+                    />
+                <Entry Placeholder="Numero Vendedor" 
+                       PlaceholderColor="Silver" 
+                       TextColor="Black" 
+                       x:Name="Vendedor_Entry" 
+                       WidthRequest="5"
+                       TranslationX="15"
+                       TranslationY="-97"
+                       Margin="0"
+                ></Entry>
+            </StackLayout>
+        </Frame>
+    </ContentPage.Content>
+</ContentPage>

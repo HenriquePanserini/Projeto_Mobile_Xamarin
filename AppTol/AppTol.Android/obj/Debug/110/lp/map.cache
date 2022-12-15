@@ -1,7 +1,9 @@
+FastAndroidCamera.dll
 FormsViewGroup.dll
 PCLExt.FileStorage.dll
 Plugin.Media.dll
 Prism.Forms.dll
+Rg.Plugins.Popup.dll
 SQLitePCLRaw.lib.e_sqlite3.android.dll
 System.Data.Portable.dll
 System.Transactions.Portable.dll
@@ -57,11 +59,14 @@ Xamarin.AndroidX.VectorDrawable.dll
 Xamarin.AndroidX.VersionedParcelable.dll
 Xamarin.AndroidX.ViewPager.dll
 Xamarin.AndroidX.ViewPager2.dll
+Xamarin.CommunityToolkit.dll
 Xamarin.Essentials.dll
 Xamarin.Forms.Platform.Android.dll
 Xamarin.Forms.Platform.dll
 Xamarin.Google.Android.Material.dll
 Xamarin.Google.Guava.ListenableFuture.dll
+ZXing.Net.Mobile.Forms.Android.dll
+ZXingNetMobile.dll
 androidx.versionedparcelable.versionedparcelable.aar
 androidx.arch.core.core-runtime.aar
 androidx.lifecycle.lifecycle-runtime.aar

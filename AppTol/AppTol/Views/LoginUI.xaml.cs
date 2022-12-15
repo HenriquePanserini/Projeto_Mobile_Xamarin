@@ -4,13 +4,16 @@ using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
-using AppTol.Controller;
 using AppTol.Views;
 using DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing;
 using DocumentFormat.OpenXml.Wordprocessing;
 using FluentValidation.Internal;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using AppTol.Helpers;
+using Xamarin.CommunityToolkit.Extensions;
+using System.Threading.Tasks;
+
 
 namespace AppTol.Views
 {
@@ -18,8 +21,6 @@ namespace AppTol.Views
     public partial class LoginUI : ContentPage
     {
 
-        verificaPermissao permissao = new verificaPermissao();
-        
         public LoginUI()
         {
             
@@ -42,11 +43,19 @@ namespace AppTol.Views
                 var Enter_User = Entry_user.Text.ToString();
                 var Enter_Pass = Entry_pass.Text.ToString();
 
+
                 if (Enter_User.ToString() != string.Empty && Enter_Pass.ToString() != string.Empty)
                 {
-                    MessagingCenter.Send<LoginUI>(this, "Hi");
-                    Query_Exec.inicioAplicacaoSync();
-                    await Navigation.PushModalAsync(new MainPage());
+                   
+                    try
+                    {
+                        MessagingCenter.Send<LoginUI>(this, "Hi");
+                        Navigation.PushModalAsync(new MainPage());
+                    }
+                    catch (Exception ex)
+                    {
+                        await this.DisplayToastAsync("Erro ao inserir o usuario" + ex.Message, 5000);
+                    }
 
                 }
                 else
@@ -55,6 +64,9 @@ namespace AppTol.Views
                     Enter_User = string.Empty;
                     Enter_Pass = string.Empty;
                 }
+              
+                
+
             }
             catch(Exception ex)
             {
@@ -64,7 +76,7 @@ namespace AppTol.Views
 
         private void Button_Clicked(object sender, EventArgs e)
         {
-            permissao.CheckPermissionAppAsync();
+
             Button_ClickedAsync(sender, e);
             
         }
@@ -72,6 +84,19 @@ namespace AppTol.Views
         private void TapGestureRecognizer_Tapped(object sender, EventArgs e)
         {
 
+        }
+
+        private async void ImageButton_Clicked(object sender, EventArgs e)
+        {
+            try
+            {
+
+                await Navigation.PushModalAsync(new IPconfig());
+
+            }catch(Exception ex)
+            {
+                await this.DisplayToastAsync("Não foi possivel acessar a paginas: Erro|" + ex.Message.Trim(), 5000);
+            }
         }
     }
 }
