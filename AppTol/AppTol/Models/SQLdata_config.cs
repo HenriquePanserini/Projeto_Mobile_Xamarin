@@ -13,21 +13,21 @@ namespace AppTol.Models
             [PrimaryKey, AutoIncrement]
             public int id_cliente { get; set; }
             public string nome { get; set; }
-            public string telefone { get; set; }
+            public Int32 telefone { get; set; }
             public DateTime atualizacao { get; set; }
             public string endereco { get; set; }
             public string bairro { get; set; }
             public string cidade { get; set; }
-            public string numero { get; set; }
-            public string cep { get; set; }
-            public string telefone1 { get; set; }
-            public string telefone2 { get; set; }
-            public string celular { get; set; }
-            public string contato { get; set; }
-            public string cnpj { get; set; }
-            public string ie { get; set; }
-            public string cpf { get; set; }
-            public string rg { get; set; }
+            public Int32 numero { get; set; }
+            public Int32 cep { get; set; }
+            public Int32 telefone1 { get; set; }
+            public Int32 telefone2 { get; set; }
+            public Int32 celular { get; set; }
+            public Int32 contato { get; set; }
+            public Int32 cnpj { get; set; }
+            public Int32 ie { get; set; }
+            public Int32 cpf { get; set; }
+            public Int32 rg { get; set; }
             public string novo { get; set; }
             public string fantasia { get; set; }
             public string email { get; set; }

@@ -9,12 +9,12 @@ using Xamarin.Forms.Xaml;
 
 namespace AppTol.Views
 {
-    [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class Lista_cliente : ContentPage
-    {
-        public Lista_cliente()
-        {
-            InitializeComponent();
-        }
-    }
+	[XamlCompilation(XamlCompilationOptions.Compile)]
+	public partial class Lista_cliente : ContentPage
+	{
+		public Lista_cliente ()
+		{
+			InitializeComponent ();
+		}
+	}
 }

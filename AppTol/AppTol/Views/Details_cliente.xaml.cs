@@ -14,7 +14,7 @@ namespace AppTol.Views
     {
         public Details_cliente()
         {
-            InitializeComponent();
+            
         }
     }
 }

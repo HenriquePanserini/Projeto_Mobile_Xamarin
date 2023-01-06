@@ -17,6 +17,6 @@ C:\Users\User\source\repos\AppTol\AppTol\AppTol\obj\Debug\netstandard2.0\Views\L
 C:\Users\User\source\repos\AppTol\AppTol\AppTol\obj\Debug\netstandard2.0\Views\Cad_cliente.xaml.g.cs
 C:\Users\User\source\repos\AppTol\AppTol\AppTol\obj\Debug\netstandard2.0\Views\Detail.xaml.g.cs
 C:\Users\User\source\repos\AppTol\AppTol\AppTol\obj\Debug\netstandard2.0\Views\Details_cliente.xaml.g.cs
-C:\Users\User\source\repos\AppTol\AppTol\AppTol\obj\Debug\netstandard2.0\Views\Lista_cliente.xaml.g.cs
 C:\Users\User\source\repos\AppTol\AppTol\AppTol\obj\Debug\netstandard2.0\Views\Master.xaml.g.cs
 C:\Users\User\source\repos\AppTol\AppTol\AppTol\obj\Debug\netstandard2.0\Views\IPconfig.xaml.g.cs
+C:\Users\User\source\repos\AppTol\AppTol\AppTol\obj\Debug\netstandard2.0\Views\ClienteView.xaml.g.cs

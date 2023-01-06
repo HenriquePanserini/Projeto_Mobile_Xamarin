@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+             x:Class="AppTol.Views.ClienteView">
+             
+    <ContentPage.Content>
+        <StackLayout Spacing="5">
+            <Entry  x:Name="txtNome" Text="{Binding nome}" HeightRequest="40" BackgroundColor="White"
+                    Placeholder="Nome" HorizontalOptions="FillAndExpand" Keyboard="Default"/>
+            <Entry  x:Name="txtCNPJ" Text="{Binding cnpj, Converter={StaticResource currencyConverter}}" HeightRequest="40" BackgroundColor="White"
+                    Placeholder="CNPJ" HorizontalOptions="FillAndExpand" Keyboard="Numeric">
+                <Entry.Behaviors>
+                    <xct:MaskedBehavior Mask="99.999.999/9999-99"/>
+                </Entry.Behaviors>
+            </Entry>
+            <Entry x:Name="txtCPF" Text="{Binding cpf, Converter={StaticResource currencyConverter}}" HeightRequest="40" BackgroundColor="White"
+                   Placeholder="CPF" HorizontalOptions="FillAndExpand" Keyboard="Numeric">
+                <Entry.Behaviors>
+                    <xct:MaskedBehavior Mask="999.999.999-99"/>
+                </Entry.Behaviors>
+            </Entry>
+            <Entry x:Name="txtRG" Text="{Binding rg, Converter={StaticResource currencyConverter}}" HeightRequest="40" BackgroundColor="White"
+                   Placeholder="RG" HorizontalOptions="FillAndExpand" Keyboard="Numeric">
+                <Entry.Behaviors>
+                    <xct:MaskedBehavior Mask="99.999.999-9"/>
+                </Entry.Behaviors>
+            </Entry>
+            <Entry x:Name="txtFantasia" Text="{Binding fantasia}" HeightRequest="40" BackgroundColor="White"
+                   Placeholder="Fantasia" HorizontalOptions="FillAndExpand" Keyboard="Default"/>
+            <Entry x:Name="txtEndereco" Text="{Binding endereco}" HeightRequest="40" BackgroundColor="White"
+                   Placeholder="Endereço" HorizontalOptions="FillAndExpand" Keyboard="Default"></Entry>
+            <Entry x:Name="txtBairro" Text="{Binding bairro}" HeightRequest="40" BackgroundColor="White"
+                   Placeholder="Bairro" HorizontalOptions="FillAndExpand" Keyboard="Default"></Entry>
+            <Entry x:Name="txtCidade" Text="{Binding cidade}" HeightRequest="40" BackgroundColor="White"
+                   Placeholder="Cidade" HorizontalOptions="FillAndExpand" Keyboard="Default"></Entry>
+            <Entry x:Name="txtTelefone1" Text="{Binding telefone1, Converter={StaticResource currencyConverter}}" HeightRequest="40" BackgroundColor="White"
+                   Placeholder="Telefone nº1" Keyboard="Numeric">
+                <Entry.Behaviors>
+                    <xct:MaskedBehavior Mask="(99)9-9999-9999"/>
+                </Entry.Behaviors>
+            </Entry>
+            <Entry x:Name="txtTelefone2" Text="{Binding telefone2, Converter={StaticResource currencyConverter}}" HeightRequest="40" BackgroundColor="White"
+                   Placeholder="Telefone n°2" HorizontalOptions="FillAndExpand" Keyboard="Numeric">
+                <Entry.Behaviors>
+                    <xct:MaskedBehavior Mask="(99)9-9999-9999"/>
+                </Entry.Behaviors>
+            </Entry>
+            <Entry x:Name="txtContato" Text="{Binding contato, Converter={StaticResource currencyConverter}}" HeightRequest="40" BackgroundColor="White"
+                   Placeholder="Contato" HorizontalOptions="FillAndExpand" Keyboard="Numeric">
+                <Entry.Behaviors>
+                    <xct:MaskedBehavior Mask="(99)9999-9999"/>
+                </Entry.Behaviors>
+            </Entry>
+            <Entry x:Name="txtEmail" Text="{Binding email}" HeightRequest="40" BackgroundColor="White"
+                   Placeholder="Digite o email" HorizontalOptions="FillAndExpand" Keyboard="Default"></Entry>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

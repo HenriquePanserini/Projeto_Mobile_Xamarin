@@ -18,7 +18,6 @@ namespace AppTol
         public App()
         {
             InitializeComponent();
-            MainPage = new NavigationPage (new LoginUI());
 
             DependencyService.Register<IMesssageService, MessageService>();
             DependencyService.Register<INavigationService, NavigationService>();
@@ -29,6 +28,27 @@ namespace AppTol
             //invoca o evento
             OnAppStart();
 
+        }
+
+        private async void OnAppStart()
+        {
+            //Obtem todos os dados
+            var getLocalDB = _clienteRepositorio.GetAllClienteData();
+
+            //Acesso para entrar na tela dce login
+            try
+            {
+                MainPage = new NavigationPage(new LoginUI());
+            }
+            catch(Exception error)
+            {
+                MessagingCenter.Send<App>(this, "Erro ao acessar o app" + error);
+            }
+            finally
+            {
+                _ = MainPage.Clip;
+            }
+           
         }
 
         protected override void OnStart()

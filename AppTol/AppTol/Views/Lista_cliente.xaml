@@ -4,9 +4,35 @@
              x:Class="AppTol.Views.Lista_cliente">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <Button Text="Novo Cliente" FontAttributes="Bold"
+                        CornerRadius="10" BorderWidth="2" BorderColor="Black"
+                        BackgroundColor="#69b069"
+                        TextColor="White" Command="{Binding Cad_cliente}"/>
+            <ListView x:Name="ClienteListView" HasUnevenRows="true" SeparatorColor="Azure"
+                      ItemsSource="{Binding List_cliente}"
+                      SelectedItem="{Binding SelectedPedidoItem, Mode=TwoWay}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout>
+                                <Label  Text="{Binding nome}" FontSize="15" TextColor="Black"/>
+                                <Label  Text="{Binding telefone1, Converter={StaticResource currencyConverter}}"
+                                        FontSize="15"
+                                        HorizontalOptions="EndAndExpand"
+                                        TextColor="Black"/>
+                                <Label Text="{Binding endereco}" FontSize="15" TextColor="Black"/>
+                                <Label Text="{Binding bairro}" FontSize="15" TextColor="Black"/>
+                                <Label Text="{Binding cidade}" FontSize="15" TextColor="Black"/>
+                                <Label Text="{Binding cep, Converter={StaticResource currencyConverter}}"
+                                       FontSize="15"
+                                       HorizontalOptions="EndAndExpand"
+                                       TextColor="Black"/>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <Button Text="Deletar Todos os Pedidos"
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

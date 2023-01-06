@@ -4,17 +4,19 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.Text;
 using AppTol.Models;
+using PCLExt.FileStorage;
 using PCLExt.FileStorage.Folders;
-using SQLite;
+using SQLitePCL;
 using Xamarin.CommunityToolkit.Extensions;
 using ZXing;
+using SQLite;
 
 namespace AppTol.Helpers
 {
     public class DatabaseHelper : data_config
     {
         static SQLiteConnection liteConect;
-        public const string DBFileName = "dados.db3";
+        public const string DBFileName = "dados.db";
          
         public DatabaseHelper()
         {
@@ -22,10 +24,10 @@ namespace AppTol.Helpers
             var pasta = new LocalRootFolder();
 
             //Cria o arquivo
-            var arquivo = pasta.CreateFile(DBFileName, PCLExt.FileStorage.CreationCollisionOption.OpenIfExists);
+            var arquivo = pasta.CreateFile(DBFileName, CreationCollisionOption.OpenIfExists);
 
             //abre o base de dados
-            liteConect = new SQLiteConnection(arquivo.Path);
+            liteConect = new SQLiteConnection(arquivo.Path, true);
 
             //cria tabela no banco de dados
             liteConect.CreateTable<cliente>();

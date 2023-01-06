@@ -9,9 +9,9 @@ using Xamarin.Forms.Xaml;
 namespace AppTol.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class Cad_clientePage : ContentPage
+    public partial class Cad_cliente : ContentPage
     {
-        public Cad_clientePage()
+        public Cad_cliente()
         {
             
         }

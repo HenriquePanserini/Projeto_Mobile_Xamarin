@@ -8,17 +8,21 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: global::Xamarin.Forms.Xaml.XamlResourceIdAttribute("AppTol.Views.Details_cliente.xaml", "Views/Details_cliente.xaml", typeof(global::AppTol.Views.Details_cliente))]
+[assembly: global::Xamarin.Forms.Xaml.XamlResourceIdAttribute("AppTol.Views.Details_cliente.xaml", "Views/Details_cliente.xaml", typeof(global::AppTol.Views.Datails_cliente))]
 
 namespace AppTol.Views {
     
     
     [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("Views\\Details_cliente.xaml")]
-    public partial class Details_cliente : global::Xamarin.Forms.ContentPage {
+    public partial class Datails_cliente : global::Xamarin.Forms.ContentPage {
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
+        private global::Xamarin.Forms.ListView ClienteListView;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
         private void InitializeComponent() {
-            global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(Details_cliente));
+            global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(Datails_cliente));
+            ClienteListView = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.ListView>(this, "ClienteListView");
         }
     }
 }

@@ -12,12 +12,12 @@ namespace AppTol.Services
     {
         public async System.Threading.Tasks.Task NavigateToClienteLista()
         {
-            await AppTol.App.Current.MainPage.Navigation.PushAsync(new Lista_cliente());
+            //await AppTol.App.Current.MainPage.Navigation.PushAsync(new List_cliente());
         }
 
         public async System.Threading.Tasks.Task NavigationToAddCliente()
         {
-           await AppTol.App.Current.MainPage.Navigation.PushAsync(new Cad_clientePage());
+           await AppTol.App.Current.MainPage.Navigation.PushAsync(new Cad_cliente());
         }
 
         public async System.Threading.Tasks.Task NavigationToDetailsPage(int ID)

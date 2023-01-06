@@ -1,9 +1,13 @@
 FastAndroidCamera.dll
+FFImageLoading.Forms.Platform.dll
+FFImageLoading.Platform.dll
 FormsViewGroup.dll
 PCLExt.FileStorage.dll
 Plugin.Media.dll
 Prism.Forms.dll
 Rg.Plugins.Popup.dll
+SQLitePCL.raw.dll
+SQLitePCLRaw.batteries_v2.dll
 SQLitePCLRaw.lib.e_sqlite3.android.dll
 System.Data.Portable.dll
 System.Transactions.Portable.dll

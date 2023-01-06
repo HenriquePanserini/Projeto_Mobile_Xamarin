@@ -1,12 +1,42 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="AppTol.Views.Details_cliente">
+             x:Class="AppTol.Views.Datails_cliente"
+             Title ="Relação ">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+        <StackLayout Spacing="50">
+            <Button Text="Novo Cliente" FontAttributes="Bold"
+                    CornerRadius="0" HeightRequest="40" BorderColor="Black" BackgroundColor="#69b069"
+                    BorderWidth="1" TextColor="White" Command="{Binding AddCommand}"/>
+            <ListView x:Name="ClienteListView" HasUnevenRows="true" SeparatorColor="Azure"
+                      ItemsSource="{Binding ClienteLista}"
+                      SelectedItem="{Binding SelectCliente, Mode=TwoWay}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="{Binding nome}" FontSize="15" TextColor="Black"/>
+                                <Label Text="{Binding telefone1, Converter={StaticResource currencyConverter}}"
+                                       FontSize="15"
+                                       HorizontalOptions="EndAndExpand"
+                                       TextColor="Black"/>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <Button Text="Deletar clientes" CornerRadius="0"
+                    VerticalOptions="EndAndExpand"
+                    FontAttributes="Bold" TextColor="White"
+                    BackgroundColor="#f6546a"
+                    Command="{Binding DeleteAllClientesCommand}"/>
+            <Button Text="Editar Clientes" CornerRadius="0"
+                    VerticalOptions="EndAndExpand"
+                    FontAttributes="Bold" TextColor="White"
+                    BackgroundColor="LightGreen"
+                
+             />
+            
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

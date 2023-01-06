@@ -193,6 +193,38 @@
           }
         }
       },
+      "SQLitePCL.raw/0.9.2": {
+        "type": "package",
+        "compile": {
+          "lib/MonoAndroid/SQLitePCL.raw.dll": {}
+        },
+        "runtime": {
+          "lib/MonoAndroid/SQLitePCL.raw.dll": {}
+        }
+      },
+      "SQLitePCLRaw.bundle_e_sqlite3/2.1.3": {
+        "type": "package",
+        "dependencies": {
+          "SQLitePCLRaw.lib.e_sqlite3.android": "2.1.3",
+          "SQLitePCLRaw.provider.e_sqlite3": "2.1.3"
+        },
+        "frameworkAssemblies": [
+          "Java.Interop",
+          "Mono.Android",
+          "System",
+          "System.Core",
+          "System.Numerics",
+          "System.Numerics.Vectors",
+          "System.Xml",
+          "mscorlib"
+        ],
+        "compile": {
+          "lib/monoandroid90/SQLitePCLRaw.batteries_v2.dll": {}
+        },
+        "runtime": {
+          "lib/monoandroid90/SQLitePCLRaw.batteries_v2.dll": {}
+        }
+      },
       "SQLitePCLRaw.bundle_green/2.0.4": {
         "type": "package",
         "dependencies": {
@@ -207,7 +239,7 @@
           "lib/netstandard2.0/SQLitePCLRaw.batteries_v2.dll": {}
         }
       },
-      "SQLitePCLRaw.core/2.1.2": {
+      "SQLitePCLRaw.core/2.1.3": {
         "type": "package",
         "dependencies": {
           "System.Memory": "4.5.3"
@@ -219,22 +251,29 @@
           "lib/netstandard2.0/SQLitePCLRaw.core.dll": {}
         }
       },
-      "SQLitePCLRaw.lib.e_sqlite3.android/2.0.4": {
+      "SQLitePCLRaw.lib.e_sqlite3.android/2.1.3": {
         "type": "package",
         "frameworkAssemblies": [
-          "Java.Interop"
+          "Java.Interop",
+          "Mono.Android",
+          "System",
+          "System.Core",
+          "System.Numerics",
+          "System.Numerics.Vectors",
+          "System.Xml",
+          "mscorlib"
         ],
         "compile": {
-          "lib/monoandroid80/SQLitePCLRaw.lib.e_sqlite3.android.dll": {}
+          "lib/monoandroid90/SQLitePCLRaw.lib.e_sqlite3.android.dll": {}
         },
         "runtime": {
-          "lib/monoandroid80/SQLitePCLRaw.lib.e_sqlite3.android.dll": {}
+          "lib/monoandroid90/SQLitePCLRaw.lib.e_sqlite3.android.dll": {}
         }
       },
-      "SQLitePCLRaw.provider.e_sqlite3/2.0.4": {
+      "SQLitePCLRaw.provider.e_sqlite3/2.1.3": {
         "type": "package",
         "dependencies": {
-          "SQLitePCLRaw.core": "2.0.4"
+          "SQLitePCLRaw.core": "2.1.3"
         },
         "compile": {
           "lib/netstandard2.0/SQLitePCLRaw.provider.e_sqlite3.dll": {}
@@ -2118,6 +2157,48 @@
           }
         }
       },
+      "Xamarin.FFImageLoading/2.4.11.982": {
+        "type": "package",
+        "compile": {
+          "lib/MonoAndroid10/FFImageLoading.Platform.dll": {
+            "related": ".pdb;.xml"
+          },
+          "lib/MonoAndroid10/FFImageLoading.dll": {
+            "related": ".pdb;.Platform.pdb;.Platform.xml;.xml"
+          }
+        },
+        "runtime": {
+          "lib/MonoAndroid10/FFImageLoading.Platform.dll": {
+            "related": ".pdb;.xml"
+          },
+          "lib/MonoAndroid10/FFImageLoading.dll": {
+            "related": ".pdb;.Platform.pdb;.Platform.xml;.xml"
+          }
+        }
+      },
+      "Xamarin.FFImageLoading.Forms/2.4.11.982": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.FFImageLoading": "2.4.11.982",
+          "Xamarin.Forms": "3.3.0.912540"
+        },
+        "compile": {
+          "lib/MonoAndroid10/FFImageLoading.Forms.Platform.dll": {
+            "related": ".pdb;.xml"
+          },
+          "lib/MonoAndroid10/FFImageLoading.Forms.dll": {
+            "related": ".pdb;.Platform.pdb;.Platform.xml;.xml"
+          }
+        },
+        "runtime": {
+          "lib/MonoAndroid10/FFImageLoading.Forms.Platform.dll": {
+            "related": ".pdb;.xml"
+          },
+          "lib/MonoAndroid10/FFImageLoading.Forms.dll": {
+            "related": ".pdb;.Platform.pdb;.Platform.xml;.xml"
+          }
+        }
+      },
       "Xamarin.Forms/5.0.0.2515": {
         "type": "package",
         "dependencies": {
@@ -2271,10 +2352,14 @@
           "PCLExt.FileStorage": "1.4.1.1",
           "Prism.Forms": "8.1.97",
           "Rg.Plugins.Popup": "2.1.0",
+          "SQLitePCL.raw": "0.9.2",
+          "SQLitePCLRaw.bundle_e_sqlite3": "2.1.3",
+          "SQLitePCLRaw.core": "2.1.3",
           "SendGrid": "9.28.1",
           "Xam.Plugin.Media": "5.0.1",
           "Xamarin.CommunityToolkit": "2.0.5",
           "Xamarin.Essentials": "1.7.3",
+          "Xamarin.FFImageLoading.Forms": "2.4.11.982",
           "Xamarin.Forms": "5.0.0.2515",
           "ZXing.Net.Mobile": "2.4.1",
           "ZXing.Net.Mobile.Forms": "2.4.1",
@@ -2633,6 +2718,56 @@
         "sqlite-net-pcl.nuspec"
       ]
     },
+    "SQLitePCL.raw/0.9.2": {
+      "sha512": "C6rPoSZcBGuBiiGXvxECliEhtSWt9PT6gEwWaJhiz26WJcSqqWGmJaIzbjyEjQj09W80/sBzZZ9YqYbNmybuLw==",
+      "type": "package",
+      "path": "sqlitepcl.raw/0.9.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/MonoAndroid/SQLitePCL.raw.dll",
+        "lib/MonoTouch/SQLitePCL.raw.dll",
+        "lib/Xamarin.iOS10/SQLitePCL.raw.dll",
+        "lib/net35/SQLitePCL.raw.dll",
+        "lib/net40/SQLitePCL.raw.dll",
+        "lib/net45/SQLitePCL.raw.dll",
+        "lib/portable-net40+sl5+netcore45+wp8+MonoAndroid10+MonoTouch10+Xamarin.iOS10/SQLitePCL.raw.dll",
+        "lib/portable-net45+netcore45+wp8+MonoAndroid10+MonoTouch10+Xamarin.iOS10/SQLitePCL.raw.dll",
+        "lib/portable-net45+netcore45+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10/SQLitePCL.raw.dll",
+        "lib/portable-net45+netcore45+wpa81+wp8+MonoAndroid10+MonoTouch10+Xamarin.iOS10/SQLitePCL.raw.dll",
+        "lib/portable-net45+sl5+netcore45+wp8+MonoAndroid10+MonoTouch10+Xamarin.iOS10/SQLitePCL.raw.dll",
+        "lib/uap10.0/SQLitePCL.raw.dll",
+        "lib/uap10.0/SQLitePCL.raw.pri",
+        "lib/win8/SQLitePCL.raw.dll",
+        "lib/win8/SQLitePCL.raw.pri",
+        "lib/win81/SQLitePCL.raw.dll",
+        "lib/win81/SQLitePCL.raw.pri",
+        "lib/wpa81/SQLitePCL.raw.dll",
+        "lib/wpa81/SQLitePCL.raw.pri",
+        "sqlitepcl.raw.0.9.2.nupkg.sha512",
+        "sqlitepcl.raw.nuspec"
+      ]
+    },
+    "SQLitePCLRaw.bundle_e_sqlite3/2.1.3": {
+      "sha512": "gQgU6SBgqN+x/QzuGdNyhjlpVYOAT8LGMY6oy5hSEh3QPfNRPMnJlv6JJpz9ttMT6WdskrLT9LG/nFrDxFtvpg==",
+      "type": "package",
+      "path": "sqlitepclraw.bundle_e_sqlite3/2.1.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/monoandroid90/SQLitePCLRaw.batteries_v2.dll",
+        "lib/net461/SQLitePCLRaw.batteries_v2.dll",
+        "lib/net6.0-android31.0/SQLitePCLRaw.batteries_v2.dll",
+        "lib/net6.0-android31.0/SQLitePCLRaw.batteries_v2.xml",
+        "lib/net6.0-ios14.0/SQLitePCLRaw.batteries_v2.dll",
+        "lib/net6.0-ios14.2/SQLitePCLRaw.batteries_v2.dll",
+        "lib/net6.0-tvos10.0/SQLitePCLRaw.batteries_v2.dll",
+        "lib/netstandard2.0/SQLitePCLRaw.batteries_v2.dll",
+        "lib/xamarinios10/SQLitePCLRaw.batteries_v2.dll",
+        "sqlitepclraw.bundle_e_sqlite3.2.1.3.nupkg.sha512",
+        "sqlitepclraw.bundle_e_sqlite3.nuspec"
+      ]
+    },
     "SQLitePCLRaw.bundle_green/2.0.4": {
       "sha512": "ubFgOHDmtTcq2LU7Ss10yHnFVMm2rFVr65Ggi+Mh514KjGx4pal98P2zSvZtWf3wbtJw6G1InBgeozBtnpEfKQ==",
       "type": "package",
@@ -2651,40 +2786,44 @@
         "sqlitepclraw.bundle_green.nuspec"
       ]
     },
-    "SQLitePCLRaw.core/2.1.2": {
-      "sha512": "A8EBepVqY2lnAp3a8jnhbgzF2tlj2S3HcJQGANTYg/TbYbKa8Z5cM1h74An/vy0svhfzT7tVY0sFmUglLgv+2g==",
+    "SQLitePCLRaw.core/2.1.3": {
+      "sha512": "1EeJBZVdtXbdvW12boHScLB8YS/QBSABRRBFsc5ffWLjsfXIYpe+dGsTmvYMKdKXsxICLYwD/7NXHu8xPwnunQ==",
       "type": "package",
-      "path": "sqlitepclraw.core/2.1.2",
+      "path": "sqlitepclraw.core/2.1.3",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "lib/netstandard2.0/SQLitePCLRaw.core.dll",
-        "sqlitepclraw.core.2.1.2.nupkg.sha512",
+        "sqlitepclraw.core.2.1.3.nupkg.sha512",
         "sqlitepclraw.core.nuspec"
       ]
     },
-    "SQLitePCLRaw.lib.e_sqlite3.android/2.0.4": {
-      "sha512": "M7evP2q/gosKlDvxtQ+T4h+MWNiBzfIis1eZr6jrQnh3H9md+74e2cni/b0vm2OymyV/zZp7cKfUgde57zvqwA==",
+    "SQLitePCLRaw.lib.e_sqlite3.android/2.1.3": {
+      "sha512": "66MAzZOZ74eAXqE5u3euldYX7df+kfLpAVjzk3dbDt6iQxmnnFCrR6uVXjorxxuHhXpZq4XBUV18A3yYwlfvDA==",
       "type": "package",
-      "path": "sqlitepclraw.lib.e_sqlite3.android/2.0.4",
+      "path": "sqlitepclraw.lib.e_sqlite3.android/2.1.3",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "lib/monoandroid80/SQLitePCLRaw.lib.e_sqlite3.android.dll",
-        "sqlitepclraw.lib.e_sqlite3.android.2.0.4.nupkg.sha512",
+        "lib/monoandroid90/SQLitePCLRaw.lib.e_sqlite3.android.dll",
+        "lib/net6.0-android31.0/SQLitePCLRaw.lib.e_sqlite3.android.aar",
+        "lib/net6.0-android31.0/SQLitePCLRaw.lib.e_sqlite3.android.dll",
+        "lib/net6.0-android31.0/SQLitePCLRaw.lib.e_sqlite3.android.xml",
+        "sqlitepclraw.lib.e_sqlite3.android.2.1.3.nupkg.sha512",
         "sqlitepclraw.lib.e_sqlite3.android.nuspec"
       ]
     },
-    "SQLitePCLRaw.provider.e_sqlite3/2.0.4": {
-      "sha512": "YiqCw+PfiPIuX2aZnEqt1ya5ldGm4ParIqzaRXtztDu8mdzZxOXVYOrKZazXg6nbwYbCP1H5mOYGmBFQ2W0M5g==",
+    "SQLitePCLRaw.provider.e_sqlite3/2.1.3": {
+      "sha512": "rTA72d1kjVTH8SdS149jHxU8ZC3WTdYEad6z3t2JB2ujzbC2gqR87sRfr04PBLq3WZ1QLy5bJkzmooIAwocDgw==",
       "type": "package",
-      "path": "sqlitepclraw.provider.e_sqlite3/2.0.4",
+      "path": "sqlitepclraw.provider.e_sqlite3/2.1.3",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
+        "lib/net6.0-windows7.0/SQLitePCLRaw.provider.e_sqlite3.dll",
+        "lib/net6.0/SQLitePCLRaw.provider.e_sqlite3.dll",
         "lib/netstandard2.0/SQLitePCLRaw.provider.e_sqlite3.dll",
-        "lib/uap10.0/SQLitePCLRaw.provider.e_sqlite3.dll",
-        "sqlitepclraw.provider.e_sqlite3.2.0.4.nupkg.sha512",
+        "sqlitepclraw.provider.e_sqlite3.2.1.3.nupkg.sha512",
         "sqlitepclraw.provider.e_sqlite3.nuspec"
       ]
     },
@@ -4325,6 +4464,116 @@
         "xamarin.essentials.nuspec"
       ]
     },
+    "Xamarin.FFImageLoading/2.4.11.982": {
+      "sha512": "M0sNIQgUPs+le6C2TS4RmZQAURnzaRVizRtnZIZ6/1//qGcEAtEXAGt/tBJz6I1zlP6XlMxq8io6b4sjFP5N9Q==",
+      "type": "package",
+      "path": "xamarin.ffimageloading/2.4.11.982",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/MonoAndroid10/FFImageLoading.Platform.dll",
+        "lib/MonoAndroid10/FFImageLoading.Platform.pdb",
+        "lib/MonoAndroid10/FFImageLoading.Platform.xml",
+        "lib/MonoAndroid10/FFImageLoading.dll",
+        "lib/MonoAndroid10/FFImageLoading.pdb",
+        "lib/MonoAndroid10/FFImageLoading.xml",
+        "lib/Xamarin.Mac20/FFImageLoading.Platform.dll",
+        "lib/Xamarin.Mac20/FFImageLoading.Platform.pdb",
+        "lib/Xamarin.Mac20/FFImageLoading.Platform.xml",
+        "lib/Xamarin.Mac20/FFImageLoading.dll",
+        "lib/Xamarin.Mac20/FFImageLoading.pdb",
+        "lib/Xamarin.Mac20/FFImageLoading.xml",
+        "lib/Xamarin.iOS10/FFImageLoading.Platform.dll",
+        "lib/Xamarin.iOS10/FFImageLoading.Platform.pdb",
+        "lib/Xamarin.iOS10/FFImageLoading.Platform.xml",
+        "lib/Xamarin.iOS10/FFImageLoading.dll",
+        "lib/Xamarin.iOS10/FFImageLoading.pdb",
+        "lib/Xamarin.iOS10/FFImageLoading.xml",
+        "lib/netstandard1.0/FFImageLoading.Platform.dll",
+        "lib/netstandard1.0/FFImageLoading.Platform.xml",
+        "lib/netstandard1.0/FFImageLoading.dll",
+        "lib/netstandard1.0/FFImageLoading.pdb",
+        "lib/netstandard1.0/FFImageLoading.xml",
+        "lib/portable-win+net45+wp80+win81+wpa81/FFImageLoading.Platform.dll",
+        "lib/portable-win+net45+wp80+win81+wpa81/FFImageLoading.Platform.xml",
+        "lib/portable-win+net45+wp80+win81+wpa81/FFImageLoading.dll",
+        "lib/portable-win+net45+wp80+win81+wpa81/FFImageLoading.pdb",
+        "lib/portable-win+net45+wp80+win81+wpa81/FFImageLoading.xml",
+        "lib/tizen40/FFImageLoading.Platform.dll",
+        "lib/tizen40/FFImageLoading.Platform.pdb",
+        "lib/tizen40/FFImageLoading.Platform.xml",
+        "lib/tizen40/FFImageLoading.dll",
+        "lib/tizen40/FFImageLoading.pdb",
+        "lib/tizen40/FFImageLoading.xml",
+        "lib/uap/FFImageLoading.Platform.dll",
+        "lib/uap/FFImageLoading.Platform.pdb",
+        "lib/uap/FFImageLoading.Platform.xml",
+        "lib/uap/FFImageLoading.dll",
+        "lib/uap/FFImageLoading.pdb",
+        "lib/uap/FFImageLoading.xml",
+        "lib/win81/FFImageLoading.Platform.dll",
+        "lib/win81/FFImageLoading.Platform.pdb",
+        "lib/win81/FFImageLoading.Platform.xml",
+        "lib/win81/FFImageLoading.dll",
+        "lib/win81/FFImageLoading.pdb",
+        "lib/win81/FFImageLoading.xml",
+        "lib/wpa81/FFImageLoading.Platform.dll",
+        "lib/wpa81/FFImageLoading.Platform.pdb",
+        "lib/wpa81/FFImageLoading.Platform.xml",
+        "lib/wpa81/FFImageLoading.dll",
+        "lib/wpa81/FFImageLoading.pdb",
+        "lib/wpa81/FFImageLoading.xml",
+        "xamarin.ffimageloading.2.4.11.982.nupkg.sha512",
+        "xamarin.ffimageloading.nuspec"
+      ]
+    },
+    "Xamarin.FFImageLoading.Forms/2.4.11.982": {
+      "sha512": "7X4t3J1wJj0/0o8+vd91hzSYlrqEeMFC7Mj+0T8O+fcbRSHo/c+QbWscEQiT4AaKCwyO709xq+7aY2XXbK/H7g==",
+      "type": "package",
+      "path": "xamarin.ffimageloading.forms/2.4.11.982",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/MonoAndroid10/FFImageLoading.Forms.Platform.dll",
+        "lib/MonoAndroid10/FFImageLoading.Forms.Platform.pdb",
+        "lib/MonoAndroid10/FFImageLoading.Forms.Platform.xml",
+        "lib/MonoAndroid10/FFImageLoading.Forms.dll",
+        "lib/MonoAndroid10/FFImageLoading.Forms.pdb",
+        "lib/MonoAndroid10/FFImageLoading.Forms.xml",
+        "lib/Xamarin.Mac20/FFImageLoading.Forms.Platform.dll",
+        "lib/Xamarin.Mac20/FFImageLoading.Forms.Platform.pdb",
+        "lib/Xamarin.Mac20/FFImageLoading.Forms.Platform.xml",
+        "lib/Xamarin.Mac20/FFImageLoading.Forms.dll",
+        "lib/Xamarin.Mac20/FFImageLoading.Forms.pdb",
+        "lib/Xamarin.Mac20/FFImageLoading.Forms.xml",
+        "lib/Xamarin.iOS10/FFImageLoading.Forms.Platform.dll",
+        "lib/Xamarin.iOS10/FFImageLoading.Forms.Platform.pdb",
+        "lib/Xamarin.iOS10/FFImageLoading.Forms.Platform.xml",
+        "lib/Xamarin.iOS10/FFImageLoading.Forms.dll",
+        "lib/Xamarin.iOS10/FFImageLoading.Forms.pdb",
+        "lib/Xamarin.iOS10/FFImageLoading.Forms.xml",
+        "lib/netstandard1.0/FFImageLoading.Forms.dll",
+        "lib/netstandard1.0/FFImageLoading.Forms.pdb",
+        "lib/netstandard1.0/FFImageLoading.Forms.xml",
+        "lib/portable-win+net45+wp80+win81+wpa81/FFImageLoading.Forms.dll",
+        "lib/portable-win+net45+wp80+win81+wpa81/FFImageLoading.Forms.pdb",
+        "lib/portable-win+net45+wp80+win81+wpa81/FFImageLoading.Forms.xml",
+        "lib/tizen40/FFImageLoading.Forms.Platform.dll",
+        "lib/tizen40/FFImageLoading.Forms.Platform.pdb",
+        "lib/tizen40/FFImageLoading.Forms.Platform.xml",
+        "lib/tizen40/FFImageLoading.Forms.dll",
+        "lib/tizen40/FFImageLoading.Forms.pdb",
+        "lib/tizen40/FFImageLoading.Forms.xml",
+        "lib/uap/FFImageLoading.Forms.Platform.dll",
+        "lib/uap/FFImageLoading.Forms.Platform.pdb",
+        "lib/uap/FFImageLoading.Forms.Platform.xml",
+        "lib/uap/FFImageLoading.Forms.dll",
+        "lib/uap/FFImageLoading.Forms.pdb",
+        "lib/uap/FFImageLoading.Forms.xml",
+        "xamarin.ffimageloading.forms.2.4.11.982.nupkg.sha512",
+        "xamarin.ffimageloading.forms.nuspec"
+      ]
+    },
     "Xamarin.Forms/5.0.0.2515": {
       "sha512": "n/Y/xk1idWRkxk7xItwvNwwda7CHpIk7JxD6tXkGXmTqiVGV1xRkepf5aKXFkQLM9KIQhXXYBxPsdyJysPpktw==",
       "type": "package",
@@ -4637,8 +4886,11 @@
       "AppTol >= 1.0.0",
       "Mono.Data.Sqlite.Portable >= 1.0.3.5",
       "Newtonsoft.Json >= 13.0.2",
+      "Rg.Plugins.Popup >= 2.1.0",
+      "Xamarin.CommunityToolkit >= 2.0.5",
       "Xamarin.Essentials >= 1.7.3",
-      "Xamarin.Forms >= 5.0.0.2515"
+      "Xamarin.Forms >= 5.0.0.2515",
+      "sqlite-net-pcl >= 1.8.116"
     ]
   },
   "packageFolders": {
@@ -4691,6 +4943,14 @@
             "target": "Package",
             "version": "[13.0.2, )"
           },
+          "Rg.Plugins.Popup": {
+            "target": "Package",
+            "version": "[2.1.0, )"
+          },
+          "Xamarin.CommunityToolkit": {
+            "target": "Package",
+            "version": "[2.0.5, )"
+          },
           "Xamarin.Essentials": {
             "target": "Package",
             "version": "[1.7.3, )"
@@ -4698,6 +4958,10 @@
           "Xamarin.Forms": {
             "target": "Package",
             "version": "[5.0.0.2515, )"
+          },
+          "sqlite-net-pcl": {
+            "target": "Package",
+            "version": "[1.8.116, )"
           }
         }
       }

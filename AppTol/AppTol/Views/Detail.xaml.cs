@@ -17,8 +17,16 @@ namespace AppTol
             InitializeComponent();
         }
 
-        private void cons_cliente_Clicked(object sender, EventArgs e)
+        private async Task cons_cliente_Clicked(object sender, EventArgs e)
         {
+            
+            try{
+                MessagingCenter.Send(this, "Acesso denied");
+                Navigation.PushModalAsync(new )
+            }catch(Exception ex)
+            {
+                
+            }
            
         }
     }
